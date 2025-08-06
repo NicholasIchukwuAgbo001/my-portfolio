@@ -1,8 +1,9 @@
+import HeroSection from "../components/HeroSection";
+
 const Home = () => {
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold">Welcome to My Portfolio</h1>
-      <p>This is the home page.</p>
+      <HeroSection />
     </div>
   );
 };
