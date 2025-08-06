@@ -7,8 +7,8 @@ const textVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: time * 0.5,
-      duration: 1,
+      delay: time * 0.3,
+      duration: 0.8,
       ease: "easeOut",
     },
   }),
@@ -16,14 +16,14 @@ const textVariant = {
 
 const HeroSection = () => {
   return (
-    <section className="px-4 md:px-8 py-12 text-white">
+    <section className="px-4 md:px-8 py-5 text-white">
       <motion.p
         variants={textVariant}
         initial="hidden"
         animate="visible"
         className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left"
       >
-        Software Engineer
+        Senior Software Engineer
       </motion.p>
 
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
@@ -100,11 +100,14 @@ const HeroSection = () => {
             }}
             className="flex flex-col items-center"
           >
-            <img
-              src="my-pic.jpg"
-              alt="My Profile"
-              className="w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-blue-600 shadow-lg hover:scale-105 transition duration-300"
-            />
+          <img
+            src="my-pic.jpg"
+            alt="My Profile"
+            className="w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full object-cover 
+             shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] 
+             hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)] 
+             hover:scale-105 transition duration-500"
+          />
           </motion.div>
 
           <motion.div
