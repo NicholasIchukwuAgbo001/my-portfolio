@@ -30,13 +30,23 @@ const HeroSection = () => {
           <SocialMedialHandle />
         </div>
 
-        <div className="w-full lg:w-auto flex flex-wrap gap-3 text-stone-400 text-sm sm:text-base font-mono pt-4 lg:pt-0">
-          <span>React</span>
-          <span>Next.js</span>
-          <span>Node.js</span>
-          <span>JavaScript</span>
-          <span>TypeScript</span>
-          <span>MongoDB</span>
+        <div className="flex flex-col justify-center items-center gap-6">
+          <div className="flex flex-wrap gap-3 text-stone-200 text-sm sm:text-base font-mono">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>MongoDB</span>
+          </div>
+
+          <div>
+            <img
+              src="my-pic.jpg"
+              alt="My Profile"
+              className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full object-cover border-4 border-blue-600 shadow-lg hover:scale-105 transition duration-300"
+            />
+          </div>
         </div>
       </div>
     </section>
