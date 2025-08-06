@@ -44,7 +44,7 @@ const HeroSection = () => {
             <img
               src="my-pic.jpg"
               alt="My Profile"
-              className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full object-cover border-4 border-blue-600 shadow-lg hover:scale-105 transition duration-300"
+              className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-blue-600 shadow-lg hover:scale-105 transition duration-300"
             />
           </div>
         </div>
