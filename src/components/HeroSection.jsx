@@ -5,11 +5,10 @@ const HeroSection = () => {
   return (
     <section className="px-4 md:px-8 py-12 text-white">
       <p className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left">
-        Frontend Engineer
+        Software Engineer
       </p>
 
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
-        {/* Text & Buttons */}
         <div className="w-full lg:max-w-xl space-y-8 text-center lg:text-left">
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug">
             Building Digital <br />
@@ -35,7 +34,6 @@ const HeroSection = () => {
           <SocialMedialHandle />
         </div>
 
-        {/* Image & Skills */}
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-wrap justify-center gap-3 text-stone-200 text-sm sm:text-base font-mono">
             <span>React</span>
