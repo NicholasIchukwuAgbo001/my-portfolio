@@ -1,20 +1,25 @@
 const HeroSection = () => {
   return (
-    <section className="px-6 py-12 text-white">
+    <section className="px-4 md:px-8 py-10 text-white">
 
-      <p className="text-stone-400 uppercase text-sm tracking-widest mb-4">
+      <p className="text-stone-400 uppercase text-sm tracking-widest mb-6">
         Frontend Engineer
       </p>
 
-      <div className="flex flex-col md:flex-row justify-between items-start gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+        <div className="max-w-xl space-y-6">
+          <h2 className="text-3xl md:text-6xl font-bold leading-relaxed">
+            Building Digital <br />
+            <span className="text-blue-600">Experiences</span> <br />
+            That Matter
+          </h2>
 
-        <div className="space-y-2 text-3xl font-semibold leading-snug">
-          <p className="text-5xl font-bold">Building Digital</p>
-          <p className="text-blue-600 font-bold text-5xl">Experiences</p>
-          <p className="font-bold text-5xl">That Matter</p>
+          <p className="text-stone-300 text-base md:text-lg leading-relaxed">
+            I craft beautiful and functional web applications using modern technologies — always with a focus on clean design and exceptional user experience.
+          </p>
         </div>
 
-        <div className="flex flex-wrap gap-6 text-stone-400 text-sm md:text-base font-mono">
+        <div className="flex flex-wrap gap-4 text-stone-400 text-sm md:text-base font-mono">
           <span>React</span>
           <span>Next.js</span>
           <span>Node.js</span>

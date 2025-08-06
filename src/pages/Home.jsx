@@ -2,7 +2,7 @@ import HeroSection from "../components/HeroSection";
 
 const Home = () => {
   return (
-    <div className="px-8 py-5">
+    <div className="px-7">
       <HeroSection />
     </div>
   );

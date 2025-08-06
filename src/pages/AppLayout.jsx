@@ -7,7 +7,7 @@ const AppLayout = () => {
     <div className="flex flex-col min-h-screen bg-slate-800 text-white">
       <Header />
 
-      <main className="flex-grow px-4 py-6">
+      <main className="flex-grow px-4 py-3">
         <Outlet />
       </main>
 
