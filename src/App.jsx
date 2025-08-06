@@ -1,8 +1,13 @@
-function App() {
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css"; 
 
-  return (
-    <h1 className="text-3xl text-yelo">Hello React</h1>
-  )
-}
-
-export default App
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
