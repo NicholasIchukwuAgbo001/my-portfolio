@@ -10,16 +10,16 @@ const navLists = [
 
 const NavBar = () => {
   return (
-    <div>
-      <ul className="flex gap-4 uppercase">
+    <nav>
+      <ul className="flex gap-6 uppercase tracking-wide">
         {navLists.map((list) => (
-          <li key={list.to} className="font-serif">
+          <li key={list.to} className="font-serif text-sm">
             <NavLink
               to={list.to}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-slate-900 font-bold'
-                  : 'text-stone-600 hover:text-slate-800'
+                  ? 'text-blue-500 border-b-2 border-blue-500'
+                  : 'text-stone-300 hover:text-white'
               }
             >
               {list.label}
@@ -27,7 +27,7 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 };
 
