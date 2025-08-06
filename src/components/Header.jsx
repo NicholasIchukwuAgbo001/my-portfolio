@@ -1,5 +1,12 @@
-const Header = () => {
-  return <h1>Header</h1>
-}
+import NavBar from "./NavBar";
 
-export default Header
+const Header = () => {
+  return (
+    <div>
+      <h2 className="text-blue-600 font-semibold">&lt;/&gt; Time to Program</h2>
+      <NavBar />
+    </div>
+  );
+};
+
+export default Header;
