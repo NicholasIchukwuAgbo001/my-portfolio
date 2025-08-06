@@ -1,3 +1,5 @@
+import SocialMedialHandle from "./SocialMedialHandle";
+
 const HeroSection = () => {
   return (
     <section className="px-4 md:px-8 py-12 text-white">
@@ -18,13 +20,14 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition duration-300">
+            <button className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-300">
               View Work
             </button>
             <button className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-300">
               Get in Touch
             </button>
           </div>
+          <SocialMedialHandle />
         </div>
 
         <div className="w-full lg:w-auto flex flex-wrap gap-3 text-stone-400 text-sm sm:text-base font-mono pt-4 lg:pt-0">
