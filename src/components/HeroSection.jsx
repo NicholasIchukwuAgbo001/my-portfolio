@@ -1,25 +1,33 @@
 const HeroSection = () => {
   return (
-    <section className="px-4 md:px-8 py-10 text-white">
-
+    <section className="px-4 md:px-8 py-12 text-white">
       <p className="text-stone-400 uppercase text-sm tracking-widest mb-6">
         Frontend Engineer
       </p>
 
-      <div className="flex flex-col md:flex-row justify-between items-start gap-10">
-        <div className="max-w-xl space-y-6">
-          <h2 className="text-3xl md:text-6xl font-bold leading-relaxed">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
+        <div className="w-full lg:max-w-xl space-y-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-relaxed">
             Building Digital <br />
             <span className="text-blue-600">Experiences</span> <br />
             That Matter
           </h2>
 
-          <p className="text-stone-300 text-base md:text-lg leading-relaxed">
+          <p className="text-stone-400 text-base sm:text-lg leading-relaxed hover:text-stone-300">
             I craft beautiful and functional web applications using modern technologies — always with a focus on clean design and exceptional user experience.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition duration-300">
+              View Work
+            </button>
+            <button className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-300">
+              Get in Touch
+            </button>
+          </div>
         </div>
 
-        <div className="flex flex-wrap gap-4 text-stone-400 text-sm md:text-base font-mono">
+        <div className="w-full lg:w-auto flex flex-wrap gap-3 text-stone-400 text-sm sm:text-base font-mono pt-4 lg:pt-0">
           <span>React</span>
           <span>Next.js</span>
           <span>Node.js</span>
