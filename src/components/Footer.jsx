@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-stone-300 py-6 px-4">
+    <footer className="bg-slate-800 text-stone-300 py-3 px-4">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-center sm:text-left">
           &copy; {new Date().getFullYear()} Ichukwu Nicholas Agbo. All rights reserved.
