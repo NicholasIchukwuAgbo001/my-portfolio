@@ -96,22 +96,22 @@ const Skills = () => {
 
   return (
     <section ref={ref} className="px-4">
-      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
-          <p className="text-blue-500 font-semibold uppercase tracking-wide text-sm mb-2">
-            Technical Expertise
-          </p>
+     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2">
+          Technical Expertise
+        </p>
 
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Skills & <span className="text-blue-500">Technologies</span>
-          </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          Skills & <span className="text-blue-500">Technologies</span>
+        </h2>
 
-          <p className="text-stone-300 mb-10">
-            These are the tools and technologies I use regularly to build responsive and performant web applications.
-          </p>
-        </div>
+        <p className="text-stone-300 max-w-2xl mx-auto text-sm sm:text-base mb-10">
+          These are the tools and technologies I use regularly to build responsive web applications.
+        </p>
+      </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+          <h3 className="text-xl text-yellow-600 tex font-semibold flex items-center gap-2 mb-3">
             <span className="text-blue-600">&lt;/&gt;</span>
             Frontend
           </h3>
@@ -124,7 +124,7 @@ const Skills = () => {
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+          <h3 className="text-xl text-stone-800 font-semibold flex items-center gap-2 mb-3">
             <span>🧱</span>
             Backend
           </h3>
@@ -137,7 +137,7 @@ const Skills = () => {
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3 text-blue-600">
             Database
           </h3>
           <p className="text-sm text-gray-500 mb-6">
@@ -149,7 +149,7 @@ const Skills = () => {
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3 text-green-600">
             <span>☁️</span>
             DevOps
           </h3>
