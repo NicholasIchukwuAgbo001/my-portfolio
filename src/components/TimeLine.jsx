@@ -40,9 +40,9 @@ const TimeLine = () => {
   return (
     <div className="p-6 text-left">
       <h3 className="text-2xl font-semibold mb-4 text-blue-500">My Journey</h3>
-      <ul className="space-y-6 border-l-2 border-blue-600 pl-6 relative">
+      <ul className="space-y-6 border-l-2 border-blue-600 pl-8 relative">
         {timelineItems.map((item, index) => (
-          <li key={index} className="relative">
+          <li key={index} className="relative hover:scale-105 transition-all duration-300">
             <div className="absolute -left-3 top-1 w-5 h-5 bg-blue-600 rounded-full border-4 border-slate-950" />
             <div className="bg-slate-900 p-4 rounded-lg shadow-md">
               <p className="text-sm text-blue-400">{item.year}</p>

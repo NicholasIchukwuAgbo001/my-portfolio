@@ -2,6 +2,7 @@ import HeroSection from "../components/HeroSection";
 import Skills from "../components/Skills";
 import ProjectLists from "../components/ProjectLists";
 import About from "../components/About";
+import ContactMe from "../components/ContactMe";
 
 const Home = () => {
   return (
@@ -21,6 +22,10 @@ const Home = () => {
 
       <section id="about">
         <About />
+      </section>
+
+      <section id="contact">
+        <ContactMe />
       </section>
     </div>
   );

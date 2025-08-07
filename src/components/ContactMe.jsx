@@ -1,0 +1,121 @@
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+  FaFacebook,
+  FaPhoneAlt,
+} from "react-icons/fa";
+
+const ContactMe = () => {
+  return (
+    <div className="py-16 px-4 text-white">
+      <div className=" mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          Get in <span className="text-blue-500">Touch</span>
+        </h2>
+
+        <p className="text-stone-300 max-w-2xl mx-auto text-sm sm:text-base mb-10">
+          Ready to start your next project? Let's discuss how we can bring your ideas to life.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
+        <div className="bg-slate-900 p-6 rounded-xl shadow-lg w-full max-w-md">
+        <div className="flex flex-col justify-center items-center sm:items-start space-y-3">
+            <h3 className="text-lg font-semibold text-blue-400">Contact Information</h3>
+            
+            <p className="text-stone-300 flex items-center gap-2">
+            <FaMapMarkerAlt className="text-blue-400" />
+            No: 12, Epetedo, Ogudu, Ojata Lagos, Nigeria
+            </p>
+            
+            <p className="text-stone-300 flex items-center gap-2">
+            <FaEnvelope className="text-blue-400" />
+            ichukwunicholasagbo@email.com
+            </p>
+            
+            <p className="text-stone-300 flex items-center gap-2">
+            <FaPhoneAlt className="text-blue-400" />
+            +234 705 858 7063
+            </p>
+          </div>
+         </div>
+
+         <div className="flex flex-col items-center sm:items-start">
+            <h3 className="text-lg font-semibold text-blue-400 mb-4">Follow Me</h3>
+          <div className="flex flex-wrap justify-center sm:justify-start gap-4">
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-md transition duration-300"
+            >
+              <FaGithub className="text-xl" />
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-md transition duration-300"
+            >
+              <FaLinkedin className="text-xl" />
+              LinkedIn
+            </a>
+
+            <a
+              href="https://twitter.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-gray-200 hover:bg-gray-300 text-black rounded-md transition duration-300"
+            >
+              <FaTwitter className="text-xl" />
+              Twitter
+            </a>
+
+            <a
+              href="mailto:your@email.com"
+              className="flex items-center gap-2 px-5 py-3 bg-gray-200 hover:bg-gray-300 text-black rounded-md transition duration-300"
+            >
+              <FaEnvelope className="text-xl" />
+              Email
+            </a>
+
+            <a
+              href="https://wa.me/2340000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-green-100 hover:bg-green-200 text-green-800 rounded-md transition duration-300"
+            >
+              <FaWhatsapp className="text-xl" />
+              WhatsApp
+            </a>
+            
+            <a
+              href="https://facebook.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-md transition duration-300"
+            >
+              <FaFacebook className="text-xl" />
+              Facebook
+            </a>
+          </div>
+        </div>
+        </div>
+
+        <div className="bg-green-100 text-green-800 px-6 py-4 rounded-md max-w-lg mx-auto text-sm text-left sm:text-center">
+          <p className="font-semibold">✅ Available for work</p>
+          <p>
+            I'm currently available for freelance projects and full-time opportunities.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactMe;
