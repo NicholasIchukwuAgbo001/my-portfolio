@@ -1,5 +1,6 @@
 
 import { useEffect, useState, useRef } from "react";
+import OtherSkills from "./OtherSkills";
 
 const frontendSkills = [
   { name: "React", level: 95, color: "bg-blue-600" },
@@ -136,6 +137,10 @@ return (
             <SkillBar key={index} skill={skill} animate={isInView} />
           ))}
         </div>
+      </div>
+
+      <div className="flex justify-center items-center py-10">
+          <OtherSkills />
       </div>
     </section>
   );
