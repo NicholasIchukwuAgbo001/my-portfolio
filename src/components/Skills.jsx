@@ -17,6 +17,22 @@ const backendSkills = [
   { name: "REST APIs", level: 92, color: "bg-orange-400" },
 ];
 
+const dataBaseSkills = [
+  { name: "MongoDB", level: 90, color: "bg-green-500" },
+  { name: "Firebase", level: 90, color: "bg-neutral-700" },
+  { name: "Supabase", level: 100, color: "bg-yellow-400" },
+  { name: "MYSQL", level: 65, color: "bg-pink-500" },
+  { name: "Prisma", level: 50, color: "bg-orange-400" },
+];
+
+const hostingSkills = [
+  { name: "Netlify", level: 99, color: "bg-green-500" },
+  { name: "Vercel", level: 100, color: "bg-neutral-700" },
+  { name: "Docker", level: 80, color: "bg-yellow-400" },
+  { name: "Git", level: 90, color: "bg-pink-500" },
+  { name: "AWS", level: 80, color: "bg-yellow-400" },
+];
+
 const SkillBar = ({ skill, animate }) => {
   const [width, setWidth] = useState("0%");
 
@@ -72,6 +88,7 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+            <span className="text-blue-600">&lt;/&gt;</span>
             Frontend
           </h3>
           <p className="text-sm text-gray-500 mb-6">
@@ -84,6 +101,7 @@ const Skills = () => {
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+            <span>🧱</span>
             Backend
           </h3>
           <p className="text-sm text-gray-500 mb-6">
@@ -96,12 +114,12 @@ const Skills = () => {
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
-            Backend
+            Database
           </h3>
           <p className="text-sm text-gray-500 mb-6">
-            Building robust server-side solutions
+            Managing and optimizing data storage
           </p>
-          {backendSkills.map((skill, index) => (
+          {dataBaseSkills.map((skill, index) => (
             <SkillBar key={index} skill={skill} animate={isInView} />
           ))}
         </div>
@@ -109,12 +127,13 @@ const Skills = () => {
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
-            Backend
+            <span>☁️</span>
+             DevOps
           </h3>
           <p className="text-sm text-gray-500 mb-6">
-            Building robust server-side solutions
+           Deploying and scalling applications
           </p>
-          {backendSkills.map((skill, index) => (
+          {hostingSkills.map((skill, index) => (
             <SkillBar key={index} skill={skill} animate={isInView} />
           ))}
         </div>
