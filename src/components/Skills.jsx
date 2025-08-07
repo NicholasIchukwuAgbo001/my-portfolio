@@ -6,6 +6,7 @@ const frontendSkills = [
   { name: "TypeScript", level: 90, color: "bg-blue-400" },
   { name: "Next.js", level: 88, color: "bg-black" },
   { name: "Tailwind CSS", level: 92, color: "bg-cyan-400" },
+  { name: "JavaScript", level: 90, color: "bg-yellow-600" },
   { name: "Framer Motion", level: 85, color: "bg-pink-400" },
 ];
 
@@ -94,7 +95,20 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={ref} className="px-4 text-slate-900">
+    <section ref={ref} className="px-4">
+      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
+          <p className="text-blue-500 font-semibold uppercase tracking-wide text-sm mb-2">
+            Technical Expertise
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Skills & <span className="text-blue-500">Technologies</span>
+          </h2>
+
+          <p className="text-stone-300 mb-10">
+            These are the tools and technologies I use regularly to build responsive and performant web applications.
+          </p>
+        </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">

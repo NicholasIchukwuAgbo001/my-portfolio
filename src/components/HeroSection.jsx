@@ -16,7 +16,7 @@ const textVariant = {
 
 const HeroSection = () => {
   return (
-    <section className="px-4 md:px-8 py-5 text-white">
+    <section className="px-4 md:px-8 pt-5 pb-16 text-white">
       <motion.p
         variants={textVariant}
         initial="hidden"

@@ -20,7 +20,7 @@ const LoveBuilding = () => {
           What I Love Building
         </p>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 pl-6">
           {items.map((item, index) => (
             <div
               key={index}
