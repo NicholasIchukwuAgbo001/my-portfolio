@@ -18,7 +18,7 @@ const OtherSkills = () => {
         {navLists.map((list, index) => (
           <li key={index} className="font-serif text-sm">
             <span
-              className="text-stone-300 border border-slate-500 px-4 py-2 rounded-full hover:bg-slate-900 transition duration-300"
+              className="text-stone-300 border border-blue-700 px-4 py-2 rounded-full"
             >
               {list.label}
             </span>
