@@ -40,7 +40,7 @@ const OtherSkills = () => {
               className="w-40 sm:w-auto flex flex-col items-center justify-center text-center"
             >
               <p className="text-2xl md:text-3xl font-extrabold text-blue-500 hover:scale-105 transition duration-300 ease-in-out">
-                <CountUp end={stat.value} duration={2} />
+                <CountUp end={stat.value} duration={80} />
                 {stat.suffix}
               </p>
               <span className="mt-2 text-sm md:text-base text-gray-600">
