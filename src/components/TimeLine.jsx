@@ -3,6 +3,7 @@ const TimeLine = () => {
     {
       year: "2019",
       title: "Started My Coding Journey",
+      tought: "Self-tought",
       description: "Began learning HTML, CSS, and JavaScript through online tutorials and building small projects."
     },
     {
@@ -36,7 +37,8 @@ const TimeLine = () => {
             <div className="absolute -left-3 top-1 w-5 h-5 bg-blue-600 rounded-full border-4 border-slate-950" />
             <div className="bg-slate-900 p-4 rounded-lg shadow-md">
               <p className="text-sm text-blue-400">{item.year}</p>
-              <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+              <h4 className="text-2xl font-semibold text-white">{item.title}</h4>
+              <p className="text-blue-500 text-sm mt-1 py-1">{item.tought}</p>
               <p className="text-stone-300 text-sm mt-1">{item.description}</p>
             </div>
           </li>
