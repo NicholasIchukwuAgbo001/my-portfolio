@@ -1,6 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import Skills from "../components/Skills";
-import ProjectLists from "./ProjectLists";
+import ProjectLists from "../components/ProjectLists";
 
 const Home = () => {
   return (
