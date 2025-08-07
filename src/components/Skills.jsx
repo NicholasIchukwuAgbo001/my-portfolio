@@ -68,8 +68,6 @@ const Skills = () => {
         setIsInView(true);
         observer.unobserve(ref.current);
       }
-    }, {
-      threshold: 0.5,
     });
 
     if (ref.current) {
