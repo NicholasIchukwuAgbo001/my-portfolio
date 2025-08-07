@@ -1,5 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import Skills from "../components/Skills";
+import ProjectLists from "./ProjectLists";
 
 const Home = () => {
   return (
@@ -9,6 +10,9 @@ const Home = () => {
       </section>
       <section id="skills">
         <Skills />
+      </section>
+      <section id="work">
+        <ProjectLists />
       </section>
     </div>
   );

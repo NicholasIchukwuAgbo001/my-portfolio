@@ -94,7 +94,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 px-4 text-slate-900">
+    <section ref={ref} className="px-4 text-slate-900">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
