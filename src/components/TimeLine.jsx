@@ -1,28 +1,23 @@
 const TimeLine = () => {
   const timelineItems = [
     {
-      year: "2019",
+      year: "2023",
       title: "Started My Coding Journey",
       tought: "Self-tought",
       description: "Began learning HTML, CSS, and JavaScript through online tutorials and building small projects."
     },
     {
-      year: "2020",
-      title: "Dived Into Backend",
-      description: "Started learning Node.js and Express, and explored RESTful APIs and databases."
+      year: "2024",
+      title: "Dived Into Frontend",
+      description: "Started learning React.js and Next.js, explored component-based architecture, state management with Redux and Context API, dynamic routing, and built several responsive web applications using Tailwind CSS and API integration."
     },
     {
-      year: "2021",
+      year: "2024",
       title: "Built Real Projects",
       description: "Worked on full-stack applications, collaborated on open-source, and improved Git/GitHub skills."
     },
     {
-      year: "2022",
-      title: "Mastered React & TypeScript",
-      description: "Learned advanced frontend development with React, React Router, Tailwind CSS, and TypeScript."
-    },
-    {
-      year: "2023 - Present",
+      year: "2025 - Present",
       title: "Becoming a Software Engineer",
       description: "Currently building scalable applications, contributing to meaningful projects, and continually learning."
     }
