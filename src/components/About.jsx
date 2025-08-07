@@ -1,3 +1,6 @@
+import Mission from "./Mission";
+import TimeLine from "./TimeLine";
+
 const About = () => {
   return (
     <section className="py-16 bg-slate-950 text-white">
@@ -8,6 +11,11 @@ const About = () => {
         <h2 className="text-3xl sm:text-5xl font-bold">
           About <span className="text-blue-600">Me</span>
         </h2>
+      </div>
+
+      <div>
+        <Mission />
+        <TimeLine />
       </div>
     </section>
   );
