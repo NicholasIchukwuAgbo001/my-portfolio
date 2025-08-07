@@ -20,7 +20,13 @@ const TimeLine = () => {
       year: "2025 - Present",
       title: "Becoming a Software Engineer",
       description: "Currently building scalable applications, contributing to meaningful projects, and continually learning."
-    }
+    },
+    {
+      year: "2025 - Beyond",
+      title: "Exploring Backend & System Design",
+      description:
+        "Deepening backend knowledge with Spring Boot and Node.js, learning database design, RESTful APIs, microservices, authentication strategies, and clean architecture principles.",
+    },
   ];
 
   return (
