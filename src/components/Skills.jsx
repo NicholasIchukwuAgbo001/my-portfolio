@@ -2,37 +2,38 @@ import { useEffect, useState, useRef } from "react";
 import OtherSkills from "./OtherSkills";
 
 const frontendSkills = [
-  { name: "React", level: 95, color: "bg-blue-600" },
-  { name: "TypeScript", level: 90, color: "bg-blue-400" },
-  { name: "Next.js", level: 88, color: "bg-black" },
-  { name: "Tailwind CSS", level: 92, color: "bg-cyan-400" },
-  { name: "JavaScript", level: 90, color: "bg-yellow-600" },
-  { name: "Framer Motion", level: 85, color: "bg-pink-400" },
+  { name: "React", level: 95, color: "bg-sky-600" },
+  { name: "TypeScript", level: 90, color: "bg-blue-500" },
+  { name: "Next.js", level: 85, color: "bg-neutral-800" },
+  { name: "Tailwind CSS", level: 99, color: "bg-cyan-500" },
+  { name: "JavaScript", level: 90, color: "bg-amber-500" },
+  { name: "Framer Motion", level: 80, color: "bg-rose-400" },
 ];
 
 const backendSkills = [
-  { name: "Node.js", level: 90, color: "bg-green-500" },
-  { name: "Express.js", level: 88, color: "bg-neutral-700" },
-  { name: "Python", level: 85, color: "bg-yellow-400" },
-  { name: "GraphQL", level: 80, color: "bg-pink-500" },
-  { name: "REST APIs", level: 92, color: "bg-orange-400" },
+  { name: "Node.js", level: 90, color: "bg-green-600" },
+  { name: "Express.js", level: 80, color: "bg-gray-700" },
+  { name: "Python", level: 65, color: "bg-indigo-500" },
+  { name: "GraphQL", level: 50, color: "bg-fuchsia-500" },
+  { name: "REST APIs", level: 85, color: "bg-orange-500" },
 ];
 
 const dataBaseSkills = [
-  { name: "MongoDB", level: 90, color: "bg-green-500" },
-  { name: "Firebase", level: 90, color: "bg-neutral-700" },
-  { name: "Supabase", level: 100, color: "bg-yellow-400" },
-  { name: "MYSQL", level: 65, color: "bg-pink-500" },
-  { name: "Prisma", level: 50, color: "bg-orange-400" },
+  { name: "MongoDB", level: 90, color: "bg-emerald-600" },
+  { name: "Firebase", level: 90, color: "bg-yellow-500" },
+  { name: "Supabase", level: 100, color: "bg-lime-500" },
+  { name: "MySQL", level: 65, color: "bg-teal-500" },
+  { name: "Prisma", level: 50, color: "bg-purple-500" },
 ];
 
 const hostingSkills = [
   { name: "Netlify", level: 99, color: "bg-green-500" },
-  { name: "Vercel", level: 100, color: "bg-neutral-700" },
-  { name: "Docker", level: 80, color: "bg-yellow-400" },
-  { name: "Git", level: 90, color: "bg-pink-500" },
-  { name: "AWS", level: 80, color: "bg-yellow-400" },
+  { name: "Vercel", level: 100, color: "bg-zinc-800" },
+  { name: "Docker", level: 80, color: "bg-sky-500" },
+  { name: "Git", level: 90, color: "bg-red-500" },
+  { name: "AWS", level: 80, color: "bg-orange-500" },
 ];
+
 
 const SkillBar = ({ skill, animate }) => {
   const [width, setWidth] = useState("0%");
