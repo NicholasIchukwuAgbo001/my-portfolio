@@ -148,7 +148,8 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-10">
+      <div className="flex flex-col justify-center items-center py-10 gap-5 px-4">
+        <h2 className="text-stone-300 text-lg font-mono">Also Working With</h2>
         <OtherSkills />
       </div>
     </section>
