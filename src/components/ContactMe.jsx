@@ -11,7 +11,7 @@ import {
 
 const ContactMe = () => {
   return (
-    <div className="py-16 px-4 text-white">
+    <div className="px-4 text-white">
       <div className=" mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           Get in <span className="text-blue-500">Touch</span>
