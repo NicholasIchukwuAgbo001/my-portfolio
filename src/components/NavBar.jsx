@@ -1,11 +1,9 @@
-import { NavLink } from 'react-router-dom';
-
 const navLists = [
-  { label: 'Home'},
-  { label: 'SKILLS'},
-  { label: 'WORK'},
-  { label: 'ABOUT'},
-  { label: 'CONTACT'},
+  { label: 'Home', to: '#hero' },
+  { label: 'Skills', to: '#skills' },
+  { label: 'Work', to: '#work' },
+  { label: 'About', to: '#about' },
+  { label: 'Contact', to: '#contact' },
 ];
 
 const NavBar = () => {
@@ -14,12 +12,12 @@ const NavBar = () => {
       <ul className="flex gap-6 uppercase tracking-wide">
         {navLists.map((list) => (
           <li key={list.to} className="font-serif text-sm hover:underline">
-            <NavLink
-              to={list.to}
-              className='text-stone-300 hover:text-slate-400'
-              >
+            <a
+              href={list.to}
+              className="text-stone-300 hover:text-slate-400 transition"
+            >
               {list.label}
-            </NavLink>
+            </a>
           </li>
         ))}
       </ul>
