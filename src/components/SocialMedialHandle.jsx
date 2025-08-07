@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaFacebook } 
 
 const SocialMedialHandle = () => {
   return (
-    <div className="flex gap-6 text-white text-2xl">
+    <div className="flex gap-6 text-white text-2xl justify-center md:justify-normal">
 
       <a
         href="mailto:ichukwunicholasagbo@gmail.com" target="_blank" 
