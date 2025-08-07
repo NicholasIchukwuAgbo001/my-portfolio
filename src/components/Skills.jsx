@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from "react";
 import OtherSkills from "./OtherSkills";
 
@@ -39,7 +38,12 @@ const SkillBar = ({ skill, animate }) => {
 
   useEffect(() => {
     if (animate) {
-      setTimeout(() => setWidth(`${skill.level}%`), 150);
+      const timeout = setTimeout(() => {
+        setWidth(`${skill.level}%`);
+      }, 150);
+      return () => clearTimeout(timeout);
+    } else {
+      setWidth("0%");
     }
   }, [animate, skill.level]);
 
@@ -64,28 +68,34 @@ const Skills = () => {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        setIsInView(true);
-        observer.unobserve(ref.current);
-      }
-    });
+    const section = ref.current;
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        } else {
+          setIsInView(false);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (section) {
+      observer.observe(section);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (section) observer.unobserve(section);
     };
-  }, [ref]);
+  }, []);
 
-return (
-  <section ref={ref} className="py-16 px-4 text-slate-900">
-    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-
+  return (
+    <section ref={ref} className="py-16 px-4 text-slate-900">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
             <span className="text-blue-600">&lt;/&gt;</span>
@@ -124,14 +134,13 @@ return (
           ))}
         </div>
 
-
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
             <span>☁️</span>
-             DevOps
+            DevOps
           </h3>
           <p className="text-sm text-gray-500 mb-6">
-           Deploying and scalling applications
+            Deploying and scaling applications
           </p>
           {hostingSkills.map((skill, index) => (
             <SkillBar key={index} skill={skill} animate={isInView} />
@@ -140,7 +149,7 @@ return (
       </div>
 
       <div className="flex justify-center items-center py-10">
-          <OtherSkills />
+        <OtherSkills />
       </div>
     </section>
   );
