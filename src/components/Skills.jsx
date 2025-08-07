@@ -1,3 +1,6 @@
+
+import { useEffect, useState, useRef } from "react";
+
 const frontendSkills = [
   { name: "React", level: 95, color: "bg-blue-600" },
   { name: "TypeScript", level: 90, color: "bg-blue-400" },
@@ -14,42 +17,105 @@ const backendSkills = [
   { name: "REST APIs", level: 92, color: "bg-orange-400" },
 ];
 
-const SkillBar = ({ skill }) => (
-  <div className="mb-4">
-    <div className="flex justify-between text-sm font-medium mb-1">
-      <span>{skill.name}</span>
-      <span>{skill.level}%</span>
+const SkillBar = ({ skill, animate }) => {
+  const [width, setWidth] = useState("0%");
+
+  useEffect(() => {
+    if (animate) {
+      setTimeout(() => setWidth(`${skill.level}%`), 150);
+    }
+  }, [animate, skill.level]);
+
+  return (
+    <div className="mb-5">
+      <div className="flex justify-between text-sm font-medium mb-1 text-slate-700">
+        <span>{skill.name}</span>
+        <span>{skill.level}%</span>
+      </div>
+      <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden">
+        <div
+          className={`h-2.5 ${skill.color} transition-all duration-1000 ease-out`}
+          style={{ width }}
+        />
+      </div>
     </div>
-    <div className="w-full h-2.5 bg-gray-200 rounded-full">
-      <div
-        className={`h-2.5 rounded-full ${skill.color}`}
-        style={{ width: `${skill.level}%` }}
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 const Skills = () => {
+  const ref = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setIsInView(true);
+        observer.unobserve(ref.current);
+      }
+    }, {
+      threshold: 0.5,
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref]);
+
   return (
-    <section className="py-16 px-4 text-slate-900">
+    <section ref={ref} className="py-16 px-4 text-slate-900">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-1"> Frontend </h3>
+        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+            Frontend
+          </h3>
           <p className="text-sm text-gray-500 mb-6">
             Crafting beautiful, responsive user interfaces
           </p>
           {frontendSkills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} />
+            <SkillBar key={index} skill={skill} animate={isInView} />
           ))}
         </div>
 
-        <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-1"> Backend </h3>
+        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+            Backend
+          </h3>
           <p className="text-sm text-gray-500 mb-6">
             Building robust server-side solutions
           </p>
           {backendSkills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} />
+            <SkillBar key={index} skill={skill} animate={isInView} />
+          ))}
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+            Backend
+          </h3>
+          <p className="text-sm text-gray-500 mb-6">
+            Building robust server-side solutions
+          </p>
+          {backendSkills.map((skill, index) => (
+            <SkillBar key={index} skill={skill} animate={isInView} />
+          ))}
+        </div>
+
+
+        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3">
+            Backend
+          </h3>
+          <p className="text-sm text-gray-500 mb-6">
+            Building robust server-side solutions
+          </p>
+          {backendSkills.map((skill, index) => (
+            <SkillBar key={index} skill={skill} animate={isInView} />
           ))}
         </div>
       </div>
