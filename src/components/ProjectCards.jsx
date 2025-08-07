@@ -1,7 +1,7 @@
 const ProjectCards = ({ title, description, imageUrl, tags, demoLink, codeLink }) => {
   return (
     <div className="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover hover:scale-105 transition duration-500" />
+      <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
 
       <div className="p-4 space-y-3">
         <h3 className="text-lg font-bold text-blue-400">{title}</h3>

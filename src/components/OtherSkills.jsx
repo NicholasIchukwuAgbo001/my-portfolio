@@ -21,7 +21,7 @@ const stats = [
 
 const OtherSkills = () => {
   return (
-    <div className="flex flex-col gap-14 items-center justify-center py-10 sm:px-8 md:px-16">
+    <div className="flex flex-col gap-14 items-center justify-center py-2 sm:px-8 md:px-16">
       <ul className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 uppercase tracking-wide">
         {navLists.map((list, index) => (
           <li key={index} className="font-serif text-sm">
