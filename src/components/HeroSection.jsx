@@ -95,9 +95,12 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, -15, 0] }}
+            animate={{
+              y: [0, -10, 0],
+              scale: [1, 1.05, 1],
+            }}
             transition={{
-              duration: 7,
+              duration: 3,
               repeat: Infinity,
               ease: "easeInOut",
             }}
