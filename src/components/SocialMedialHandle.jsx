@@ -12,7 +12,8 @@ const SocialMedialHandle = () => {
       </a>
 
       <a
-        href="https://github.com/NicholasIchukwuAgbo001" target="_blank" 
+        href="https://github.com/NicholasIchukwuAgbo001" 
+        target="_blank" 
         rel="noopener noreferrer">
         <FaGithub className="hover:text-gray-300 transition" />
       </a>
@@ -25,21 +26,21 @@ const SocialMedialHandle = () => {
       </a>
 
       <a
-        href="https://twitter.com/yourprofile" 
+        href="#" 
         target="_blank" 
         rel="noopener noreferrer">
         <FaTwitter className="hover:text-sky-400 transition" />
       </a>
 
       <a
-        href="https://instagram.com/yourprofile" 
+        href="#" 
         target="_blank" 
         rel="noopener noreferrer">
         <FaInstagram className="hover:text-pink-500 transition" />
       </a>
 
       <a
-        href="https://wa.me/2347058705863"
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
         >

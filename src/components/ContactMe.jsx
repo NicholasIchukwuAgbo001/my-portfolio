@@ -13,7 +13,7 @@ const ContactMe = () => {
   return (
     <div className="px-4 text-white">
       <div className="mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <h2 className="text-3xl sm:text-6xl font-bold mb-4">
           Get in <span className="text-blue-500">Touch</span>
         </h2>
 
@@ -47,7 +47,7 @@ const ContactMe = () => {
             <h3 className="text-lg font-semibold text-blue-400 mb-4">Follow Me</h3>
             <div className="flex flex-wrap justify-center sm:justify-start gap-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/NicholasIchukwuAgbo001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-md transition duration-300"
@@ -57,7 +57,7 @@ const ContactMe = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/ichukwu-nicholas-agbo-a43946363" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-3 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-md transition duration-300"
@@ -77,7 +77,7 @@ const ContactMe = () => {
               </a>
 
               <a
-                href="mailto:your@email.com"
+                href="mailto:ichukwunicholasagbo@email.com"
                 className="flex items-center gap-2 px-5 py-3 bg-gray-200 hover:bg-gray-300 text-black rounded-md transition duration-300"
               >
                 <FaEnvelope className="text-xl" />
@@ -85,7 +85,7 @@ const ContactMe = () => {
               </a>
 
               <a
-                href="https://wa.me/2340000000000"
+                href="https://wa.me/2347058705863"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-3 bg-green-100 hover:bg-green-200 text-green-800 rounded-md transition duration-300"
