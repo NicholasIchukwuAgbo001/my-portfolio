@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import OtherSkills from "./OtherSkills";
+import { FaCode, FaDatabase, FaServer, FaCloud } from "react-icons/fa"
 
 const frontendSkills = [
   { name: "React", level: 95, color: "bg-sky-600" },
@@ -98,7 +99,7 @@ const Skills = () => {
 
   return (
     <section ref={ref} className="px-4 py-4">
-     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2">
           Technical Expertise
         </p>
@@ -111,56 +112,66 @@ const Skills = () => {
           These are the tools and technologies I use regularly to build responsive web applications.
         </p>
       </div>
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl text-yellow-600 tex font-semibold flex items-center gap-2 mb-3">
-            <span className="text-blue-600">&lt;/&gt;</span>
+          <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
+            <FaCode className="text-yellow-500" />
             Frontend
           </h3>
           <p className="text-sm text-gray-500 mb-6">
             Crafting beautiful, responsive user interfaces
           </p>
-          {frontendSkills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} animate={isInView} />
-          ))}
+          <div className="space-y-4">
+            {frontendSkills.map((skill, index) => (
+              <SkillBar key={index} skill={skill} animate={isInView} />
+            ))}
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl text-stone-800 font-semibold flex items-center gap-2 mb-3">
-            <span>🧱</span>
+          <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
+            <FaServer className="text-red-500" />
             Backend
           </h3>
           <p className="text-sm text-gray-500 mb-6">
             Building robust server-side solutions
           </p>
-          {backendSkills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} animate={isInView} />
-          ))}
+          <div className="space-y-4">
+            {backendSkills.map((skill, index) => (
+              <SkillBar key={index} skill={skill} animate={isInView} />
+            ))}
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3 text-blue-600">
+          <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
+            <FaDatabase className="text-green-500" />
             Database
           </h3>
           <p className="text-sm text-gray-500 mb-6">
             Managing and optimizing data storage
           </p>
-          {dataBaseSkills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} animate={isInView} />
-          ))}
+          <div className="space-y-4">
+            {dataBaseSkills.map((skill, index) => (
+              <SkillBar key={index} skill={skill} animate={isInView} />
+            ))}
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-          <h3 className="text-xl font-semibold flex items-center gap-2 mb-3 text-green-600">
-            <span>☁️</span>
+          <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
+            <FaCloud className="text-purple-500" />
             DevOps
           </h3>
           <p className="text-sm text-gray-500 mb-6">
             Deploying and scaling applications
           </p>
-          {hostingSkills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} animate={isInView} />
-          ))}
+          <div className="space-y-4">
+            {hostingSkills.map((skill, index) => (
+              <SkillBar key={index} skill={skill} animate={isInView} />
+            ))}
+          </div>
         </div>
       </div>
 
@@ -169,6 +180,7 @@ const Skills = () => {
         <OtherSkills />
       </div>
     </section>
+
   );
 };
 
