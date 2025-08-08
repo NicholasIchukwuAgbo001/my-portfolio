@@ -12,44 +12,39 @@ const HeroH1 = () => {
         setDisplayedText(["", "", ""]);
         setLineIndex(0);
         setCharIndex(0);
-      }, 2000); 
+      }, 2000);
       return () => clearTimeout(restartTimeout);
     }
 
     if (charIndex < lines[lineIndex].length) {
-      const timeout = setTimeout(() => {
+      const charTimeout = setTimeout(() => {
         setDisplayedText((prev) => {
           const updated = [...prev];
           updated[lineIndex] += lines[lineIndex][charIndex];
           return updated;
-        }); 
+        });
         setCharIndex((prev) => prev + 1);
       }, 80);
-      return () => clearTimeout(timeout);
+      return () => clearTimeout(charTimeout);
     } else {
-      const nextLineTimeout = setTimeout(() => {
+      const lineTimeout = setTimeout(() => {
         setLineIndex((prev) => prev + 1);
         setCharIndex(0);
       }, 500);
-      return () => clearTimeout(nextLineTimeout);
+      return () => clearTimeout(lineTimeout);
     }
   });
 
   return (
     <>
-      <p
-        className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left"
-      >
+      <p className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left">
         Senior Software Engineer
       </p>
-
-     <h2
-        className="text-4xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug"
-      >
+      <h2 className="text-4xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug">
         {displayedText[0]} <br />
         <span className="text-blue-600">{displayedText[1]}</span> <br />
         {displayedText[2]}
-    </h2>
+      </h2>
     </>
   );
 };
