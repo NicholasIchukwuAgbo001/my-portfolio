@@ -17,7 +17,7 @@ const textVariant = {
 
 const HeroSection = () => {
   return (
-    <section className="px-4 md:px-8 pt-5 pb-16 text-white">
+    <section className="px-4 pt-5 pb-16 text-white">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
         <motion.div
           initial="hidden"
