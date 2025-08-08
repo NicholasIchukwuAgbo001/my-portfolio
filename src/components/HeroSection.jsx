@@ -81,14 +81,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-3 text-stone-100 text-sm sm:text-base font-mono"
+            className="flex flex-wrap justify-center gap-3 text-sm sm:text-base font-mono"
           >
-            <span>React</span>
-            <span>Next.js</span>
-            <span>Node.js</span>
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span>MongoDB</span>
+            <span className="bg-blue-500 text-white px-3 py-1 rounded-full">React</span>
+            <span className="bg-gray-900 text-white px-3 py-1 rounded-full">Next.js</span>
+            <span className="bg-green-700 text-white px-3 py-1 rounded-full">Node.js</span>
+            <span className="bg-yellow-400 text-black px-3 py-1 rounded-full">JavaScript</span>
+            <span className="bg-blue-700 text-white px-3 py-1 rounded-full">TypeScript</span>
           </motion.div>
 
           <motion.div
