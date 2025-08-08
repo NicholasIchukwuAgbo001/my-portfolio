@@ -12,7 +12,7 @@ const HeroH1 = () => {
         setDisplayedText(["", "", ""]);
         setLineIndex(0);
         setCharIndex(0);
-      }, 2000);
+      }, 5000);
       return () => clearTimeout(restartTimeout);
     }
 
