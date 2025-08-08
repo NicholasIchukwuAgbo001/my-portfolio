@@ -18,26 +18,13 @@ const textVariant = {
 const HeroSection = () => {
   return (
     <section className="px-4 md:px-8 pt-5 pb-16 text-white">
-      <motion.p
-        variants={textVariant}
-        initial="hidden"
-        animate="visible"
-        className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left"
-      >
-        Senior Software Engineer
-      </motion.p>
-
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
         <motion.div
           initial="hidden"
           animate="visible"
           className="w-full lg:max-w-xl space-y-8 text-center lg:text-left"
         >
-          <motion.h2
-            custom={1}
-            variants={textVariant}
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug"
-          >
+          <motion.h2 custom={1} variants={textVariant}>
             <HeroH1 />
           </motion.h2>
 
@@ -56,14 +43,16 @@ const HeroSection = () => {
             variants={textVariant}
             className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2 pb-8 sm:pb-10"
           >
-            <a 
-             href="#work"
-             className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-500">
+            <a
+              href="#work"
+              className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-500"
+            >
               View Work
             </a>
-            <a 
-             href="#contact"
-             className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-500">
+            <a
+              href="#contact"
+              className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-500"
+            >
               Get in Touch
             </a>
           </motion.div>
@@ -79,7 +68,6 @@ const HeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="flex flex-col items-center gap-6"
         >
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,25 +82,15 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            animate={{
-              y: [0, -10, 0],
-              scale: [1, 1.05, 1],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+            animate={{ y: [0, -10, 0], scale: [1, 1.05, 1] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center"
           >
-          <img
-            src="my-pic.jpg"
-            alt="My Profile"
-            className="w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full object-cover 
-             shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] 
-             hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)] 
-             hover:scale-105 transition duration-500"
-          />
+            <img
+              src="my-pic.jpg"
+              alt="My Profile"
+              className="w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full object-cover shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)] hover:scale-105 transition duration-500"
+            />
           </motion.div>
 
           <motion.div

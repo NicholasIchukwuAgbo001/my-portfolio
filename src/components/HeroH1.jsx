@@ -36,13 +36,21 @@ const HeroH1 = () => {
   });
 
   return (
-    <h2
-      className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug"
-    >
-      {displayedText[0]} <br />
-      <span className="text-blue-600">{displayedText[1]}</span> <br />
-      {displayedText[2]}
+    <>
+      <p
+        className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left"
+      >
+        Senior Software Engineer
+      </p>
+
+     <h2
+        className="text-4xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug"
+      >
+        {displayedText[0]} <br />
+        <span className="text-blue-600">{displayedText[1]}</span> <br />
+        {displayedText[2]}
     </h2>
+    </>
   );
 };
 
