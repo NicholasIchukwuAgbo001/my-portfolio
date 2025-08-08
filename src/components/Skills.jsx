@@ -12,10 +12,11 @@ const frontendSkills = [
 
 const backendSkills = [
   { name: "Node.js", level: 90, color: "bg-green-600" },
-  { name: "Express.js", level: 80, color: "bg-gray-700" },
+  { name: "Java", level: 80, color: "bg-slate-500" },
   { name: "Python", level: 65, color: "bg-indigo-500" },
   { name: "GraphQL", level: 50, color: "bg-fuchsia-500" },
   { name: "REST APIs", level: 85, color: "bg-orange-500" },
+  { name: "Go", level: 65, color: "bg-blue-800"},
 ];
 
 const dataBaseSkills = [
