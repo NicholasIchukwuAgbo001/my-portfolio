@@ -24,7 +24,7 @@ const projects = [
     description:
       "A travel tracking app that lets you log cities you've visited, add notes and visit dates, and view them all on an interactive world map.",
     imageUrl: "project-3.png",
-    tags: ["React", "Tailwind", "Redux Toolkit, java"],
+    tags: ["React", "Tailwind", "Redux Toolkit", "java"],
     codeLink: "https://github.com/NicholasIchukwuAgbo001/world-wise.git",
   },
 ];
@@ -33,7 +33,7 @@ const ProjectLists = () => {
   return (
     <section className="px-5 text-white">
       <div className="text-center pb-10">
-        <h2 className="font-bold mb-3 text-3xl text-blue-500">
+        <h2 className="font-bold mb-3 text-4xl text-blue-500">
           Recents <span className="text-white">Projects</span>
         </h2>
         <p className="text-stone-400">

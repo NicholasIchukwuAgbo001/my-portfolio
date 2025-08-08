@@ -8,7 +8,7 @@ import ContactMe from "../components/ContactMe";
 
 const Home = () => {
   return (
-    <div className="px-2 md:px-4">
+    <div className="px-2 md:px-4 py-2">
       <motion.section
         id="home"
         initial={{ opacity: 0, y: 50 }}
