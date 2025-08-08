@@ -1,34 +1,66 @@
+import { motion } from "framer-motion";
 import HeroSection from "../components/HeroSection";
 import Skills from "../components/Skills";
 import ProjectLists from "../components/ProjectLists";
 import About from "../components/About";
 import ContactMe from "../components/ContactMe";
 
+
 const Home = () => {
   return (
     <div className="px-2 md:px-4">
-
-      <section id="home">
+      <motion.section
+        id="home"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+      >
         <HeroSection />
-      </section>
+      </motion.section>
 
-      <section id="skills">
+      <motion.section
+        id="skills"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: false }}
+      >
         <Skills />
-      </section>
+      </motion.section>
 
-      <section id="work">
+      <motion.section
+        id="work"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: false }}
+      >
         <ProjectLists />
-      </section>
+      </motion.section>
 
-      <section id="about">
+      <motion.section
+        id="about"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: false }}
+      >
         <About />
-      </section>
+      </motion.section>
 
-      <section id="contact">
+      <motion.section
+        id="contact"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: false }}
+      >
         <ContactMe />
-      </section>
+      </motion.section>
     </div>
   );
 };
 
 export default Home;
+
