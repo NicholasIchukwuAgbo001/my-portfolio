@@ -57,12 +57,16 @@ const HeroSection = () => {
             variants={textVariant}
             className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2 pb-8 sm:pb-10"
           >
-            <button className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-500">
+            <a 
+             href="#work"
+             className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-500">
               View Work
-            </button>
-            <button className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-500">
+            </a>
+            <a 
+             href="#contact"
+             className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-500">
               Get in Touch
-            </button>
+            </a>
           </motion.div>
 
           <motion.div custom={4} variants={textVariant}>
