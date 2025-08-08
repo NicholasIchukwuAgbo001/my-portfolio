@@ -35,14 +35,16 @@ const SocialMedialHandle = () => {
       </a>
 
       <a
-        href="#" 
-        target="_blank" 
-        rel="noopener noreferrer">
-        <FaInstagram className="hover:text-pink-500 transition" />
+        href="https://instagram.com/nicholasichukwu2003"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaInstagram className="hover:text-pink-500 transition duration-300 ease-in-out" />
       </a>
 
+
       <a
-        href="#"
+        href="https://wa.me/2347058705863"
         target="_blank"
         rel="noopener noreferrer"
         >
@@ -50,7 +52,7 @@ const SocialMedialHandle = () => {
        </a>
 
         <a
-          href="#"
+          href="https://www.facebook.com/profile.php?id=61579155453621"
           target="_blank"
           rel="noopener noreferrer"
           >

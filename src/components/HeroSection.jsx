@@ -57,7 +57,7 @@ const HeroSection = () => {
             </a>
           </motion.div>
 
-          <motion.div custom={4} variants={textVariant}>
+          <motion.div custom={4} variants={textVariant} className="hidden lg:block">
             <SocialMedialHandle />
           </motion.div>
         </motion.div>
