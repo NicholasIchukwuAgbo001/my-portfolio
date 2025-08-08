@@ -67,7 +67,7 @@ const ContactMe = () => {
               </a>
 
               <a
-                href="https://twitter.com/yourusername"
+                href="https://x.com/AgboIchukw36207"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-3 bg-gray-200 hover:bg-gray-300 text-black rounded-md transition duration-300"

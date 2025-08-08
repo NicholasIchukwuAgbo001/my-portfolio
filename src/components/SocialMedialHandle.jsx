@@ -26,10 +26,12 @@ const SocialMedialHandle = () => {
       </a>
 
       <a
-        href="#" 
-        target="_blank" 
-        rel="noopener noreferrer">
-        <FaTwitter className="hover:text-sky-400 transition" />
+        href="https://x.com/AgboIchukw36207"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Follow me on Twitter"
+      >
+        <FaTwitter className="hover:text-sky-400 transition-colors duration-300" />
       </a>
 
       <a
