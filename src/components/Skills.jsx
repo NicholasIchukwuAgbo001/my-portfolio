@@ -97,7 +97,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={ref} className="px-4">
+    <section ref={ref} className="px-4 py-4">
      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2">
           Technical Expertise
