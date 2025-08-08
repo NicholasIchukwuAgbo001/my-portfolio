@@ -8,11 +8,11 @@ const Header = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header className="flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-slate-950 sticky top-0 z-50 transition-shadow duration-300 shadow-[0_4px_6px_-1px_rgba(37,99,235,0.5)] hover:shadow-[0_6px_12px_-2px_rgba(37,99,235,0.7)]">
-
-      <a 
+    <header className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-slate-950 sticky top-0 z-50 shadow-[0_4px_6px_-1px_rgba(37,99,235,0.5)] hover:shadow-[0_6px_12px_-2px_rgba(37,99,235,0.7)]">
+      <a
         href="#home"
-        className="text-blue-600 text-base md:text-lg font-bold tracking-wide cursor-pointer whitespace-nowrap">
+        className="text-blue-600 text-base md:text-lg font-bold tracking-wide cursor-pointer whitespace-nowrap"
+      >
         &lt;/&gt; I_AM NICHOLAS
       </a>
 
@@ -29,11 +29,21 @@ const Header = () => {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="w-full mt-4 md:hidden">
-          <NavBar onClick={() => setIsOpen(false)} />
+      <div
+        className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } md:hidden`}
+      >
+
+        <div
+          className="absolute inset-0 bg-black bg-opacity-50"
+          onClick={() => setIsOpen(false)}
+        ></div>
+
+        <div className="absolute left-0 top-0 h-full w-64 bg-slate-900 p-6 shadow-lg">
+          <NavBar onItemClick={() => setIsOpen(false)} />
         </div>
-      )}
+      </div>
     </header>
   );
 };

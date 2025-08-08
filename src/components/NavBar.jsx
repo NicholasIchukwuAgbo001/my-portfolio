@@ -8,49 +8,47 @@ const navLists = [
   { label: "Contact", to: "contact" },
 ];
 
-const NavBar = () => {
+const NavBar = ({ onItemClick }) => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navLists.map((item) =>
-        document.getElementById(item.to)
-      );
-
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-      for (const section of sections) {
-        if (section) {
-          const top = section.offsetTop;
-          const bottom = top + section.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < bottom) {
-            setActiveSection(section.id);
-            break;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
           }
-        }
-      }
-    };
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    navLists.forEach(({ to }) => {
+      const section = document.getElementById(to);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id); // highlight immediately when clicked
     }
+    if (onItemClick) onItemClick();
   };
 
   return (
     <nav>
-      <ul className="flex gap-6 uppercase tracking-wide">
+      <ul className="flex flex-col md:flex-row gap-6 uppercase tracking-wide">
         {navLists.map((list) => (
           <li
             key={list.to}
-            className={`font-serif text-sm cursor-pointer ${
+            className={`font-serif text-sm cursor-pointer transition-all duration-300 underline-offset-4 ${
               activeSection === list.to
-                ? "text-blue-500 underline"
+                ? "text-blue-500 font-bold underline"
                 : "text-stone-300 hover:text-slate-400"
             }`}
             onClick={() => scrollToSection(list.to)}
@@ -63,4 +61,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default NavBar;
