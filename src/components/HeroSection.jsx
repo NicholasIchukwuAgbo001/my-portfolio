@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SocialMedialHandle from "./SocialMedialHandle";
+import HeroH1 from "./HeroH1";
 
 const textVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -37,9 +38,7 @@ const HeroSection = () => {
             variants={textVariant}
             className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug"
           >
-            Building Digital <br />
-            <span className="text-blue-600">Experiences</span> <br />
-            That Matter
+            <HeroH1 />
           </motion.h2>
 
           <motion.p
