@@ -3,6 +3,7 @@ import {
   FaLinkedin,
   FaTwitter,
   FaFacebook,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -45,6 +46,14 @@ const Footer = () => {
             className="hover:text-blue-600 transition"
           >
             <FaFacebook />
+          </a>
+          <a
+            href="https://wa.me/2347058705863"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-600 transition"
+          >
+            <FaWhatsapp />
           </a>
         </div>
       </div>
