@@ -12,7 +12,7 @@ import DirectMessage from "./DirectMessage";
 
 const ContactMe = () => {
   return (
-    <div className="px-4 text-white pb-5">
+    <div className="px-4 pt-16 text-white pb-5">
       <div className="mx-auto text-center">
         <h2 className="text-3xl sm:text-6xl font-bold mb-4">
           Get in <span className="text-blue-500">Touch</span>

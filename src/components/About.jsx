@@ -18,7 +18,7 @@ const About = () => {
         <TimeLine />
        </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-10 text-center">
+      <div className="max-w-4xl mx-auto px-4 pt-10 text-center">
         <p className="text-stone-400 uppercase tracking-wide text-sm mb-5">
           Ready to bring your idea to life?
         </p>
