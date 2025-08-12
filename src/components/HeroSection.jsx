@@ -94,17 +94,19 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, -10, 0], scale: [1, 1.05, 1] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center"
+            animate={{ y: [0, -10, 0], scale: [1, 1.10, 1] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center py-6 px-8"
           >
-            <img
-              src="my-pic.jpg"
-              alt="My Profile"
-              className="w-44 h-44 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover
-                        shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)]
-                        hover:scale-105 transition duration-500"
-            />
+            <div className="relative p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <img
+                src="my-pic.jpg"
+                alt="My Profile"
+                className="w-44 h-44 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover
+                          shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)]
+                          hover:scale-105 transition duration-500"
+              />
+            </div>
           </motion.div>
 
           <motion.div
