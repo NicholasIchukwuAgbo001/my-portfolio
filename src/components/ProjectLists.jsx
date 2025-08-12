@@ -40,7 +40,7 @@ const projects = [
 
 const ProjectLists = () => {
   return (
-    <section className="px-5 text-white">
+    <section className="text-white">
       <div className="text-center pb-10">
         <h2 className="font-bold mb-3 text-4xl text-blue-500">
           Recents <span className="text-white">Projects</span>

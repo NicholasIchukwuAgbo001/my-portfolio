@@ -17,13 +17,13 @@ const textVariant = {
 
 const HeroSection = () => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 pt-8 pb-16 sm:pb-20 text-white">
+    <section className="text-white">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-16">
 
         <motion.div
           initial="hidden"
           animate="visible"
-          className="w-full lg:max-w-xl space-y-6 sm:space-y-8 text-center lg:text-left"
+          className="w-full lg:max-w-xl sm:space-y-8 text-center lg:text-left"
         >
           <motion.h2 custom={1} variants={textVariant}>
             <HeroH1 />

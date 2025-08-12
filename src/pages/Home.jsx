@@ -15,7 +15,7 @@ const sections = [
 
 const Home = () => {
   return (
-    <div className="px-2 md:px-5 py-2">
+    <div className="px-2">
       {sections.map(({ id, component }, index) => (
         <motion.section
           key={id}
