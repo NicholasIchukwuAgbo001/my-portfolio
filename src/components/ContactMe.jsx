@@ -8,10 +8,11 @@ import {
   FaFacebook,
   FaPhoneAlt,
 } from "react-icons/fa";
+import DirectMessage from "./DirectMessage";
 
 const ContactMe = () => {
   return (
-    <div className="px-4 text-white">
+    <div className="px-4 text-white pb-5">
       <div className="mx-auto text-center">
         <h2 className="text-3xl sm:text-6xl font-bold mb-4">
           Get in <span className="text-blue-500">Touch</span>
@@ -22,6 +23,7 @@ const ContactMe = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
+        
           <div className="bg-slate-900 p-6 rounded-xl shadow-lg w-full max-w-md mx-auto">
             <div className="flex flex-col justify-center items-center sm:items-start space-y-3">
               <h3 className="text-lg font-semibold text-blue-400">Contact Information</h3>
@@ -107,12 +109,15 @@ const ContactMe = () => {
           </div>
         </div>
 
-        <div className="bg-green-100 text-green-800 px-6 py-4 rounded-md max-w-lg mx-auto text-sm text-center">
-          <p className="font-semibold">✅ Available for work</p>
-          <p>
-            I'm currently available for freelance projects and full-time opportunities.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <DirectMessage />
+          <div className="bg-green-100 text-green-800 px-6 py-4 rounded-md max-w-lg mx-auto text-center shadow-lg hover:shadow-xl transition duration-300">
+            <p className="font-extrabold text-xl"> 🌟 Let's Collaborate! 🌟</p>
+            <p className="font-semibold text-lg"> ✅ Available for Work</p>
+            <p className="text-md">I'm excited to bring my skills and expertise to your next project! I'm currently available for freelance projects and full-time opportunities. Let's create something amazing together! 🚀</p>
+          </div>
         </div>
+
       </div>
     </div>
   );

@@ -19,7 +19,6 @@ const HeroSection = () => {
   return (
     <section className="text-white pb-10 pt-10">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-16">
-
         <motion.div
           initial="hidden"
           animate="visible"
