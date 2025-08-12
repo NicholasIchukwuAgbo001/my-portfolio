@@ -6,23 +6,26 @@ import About from "../components/About";
 import ContactMe from "../components/ContactMe";
 
 const sections = [
-  { id: "home", component: <HeroSection />, delay: 0 },
-  { id: "skills", component: <Skills />, delay: 0.5 },
-  { id: "work", component: <ProjectLists />, delay: 0.5 },
-  { id: "about", component: <About />, delay: 0.5 },
-  { id: "contact", component: <ContactMe />, delay: 0.5 },
+  { id: "home", component: <HeroSection /> },
+  { id: "skills", component: <Skills /> },
+  { id: "work", component: <ProjectLists /> },
+  { id: "about", component: <About /> },
+  { id: "contact", component: <ContactMe /> },
 ];
 
 const Home = () => {
   return (
     <div className="px-2 md:px-5 py-2">
-      {sections.map(({ id, component, delay }) => (
+      {sections.map(({ id, component }, index) => (
         <motion.section
           key={id}
           id={id}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay }}
+          transition={{
+            duration: 0.6,
+            delay: index * 0.2,
+          }}
           viewport={{ once: false }}
         >
           {component}
