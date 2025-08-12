@@ -17,7 +17,7 @@ const textVariant = {
 
 const HeroSection = () => {
   return (
-    <section className="text-white">
+    <section className="text-white pb-10 pt-10">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-16">
 
         <motion.div
@@ -32,7 +32,7 @@ const HeroSection = () => {
           <motion.p
             custom={2}
             variants={textVariant}
-            className="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed hover:text-stone-100"
+            className="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed hover:text-stone-100 py-5"
           >
             I craft beautiful and functional web applications using modern
             technologies, always with a focus on clean design and exceptional

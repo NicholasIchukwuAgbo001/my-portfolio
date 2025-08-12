@@ -97,7 +97,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={ref} className="pt-16">
+    <section ref={ref} className="pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2">
           Technical Expertise
@@ -174,7 +174,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center py-10 gap-5 px-4">
+      <div className="flex flex-col justify-center items-center pt-10 gap-5">
         <h2 className="text-stone-300 text-lg font-mono">Also Working With</h2>
         <OtherSkills />
       </div>

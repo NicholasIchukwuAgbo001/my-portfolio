@@ -3,7 +3,7 @@ import TimeLine from "./TimeLine";
 
 const About = () => {
   return (
-    <section className="py-20 bg-slate-950 text-white">
+    <section className="pt-20 bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <p className="text-stone-300 uppercase tracking-wide text-sm mb-2">
           Get to know me
