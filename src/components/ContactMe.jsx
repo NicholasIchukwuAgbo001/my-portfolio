@@ -8,7 +8,6 @@ import {
   FaFacebook,
   FaPhoneAlt,
 } from "react-icons/fa";
-import DirectMessage from "./DirectMessage";
 
 const ContactMe = () => {
   return (
@@ -109,13 +108,12 @@ const ContactMe = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <DirectMessage />
-          <div className="bg-green-100 text-green-800 px-6 py-4 rounded-md max-w-lg mx-auto text-center shadow-lg hover:shadow-xl transition duration-300">
-            <p className="font-extrabold text-xl"> 🌟 Let's Collaborate! 🌟</p>
-            <p className="font-semibold text-lg"> ✅ Available for Work</p>
-            <p className="text-md">I'm excited to bring my skills and expertise to your next project! I'm currently available for freelance projects and full-time opportunities. Let's create something amazing together! 🚀</p>
-          </div>
+        <div className="bg-green-100 text-green-800 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-md max-w-full sm:max-w-xl md:max-w-lg mx-auto text-center shadow-lg hover:shadow-xl transition duration-300">
+          <p className="font-extrabold text-lg sm:text-xl md:text-2xl">🌟 Let's Collaborate! 🌟</p>
+          <p className="font-semibold text-base sm:text-lg md:text-xl mt-1">✅ Available for Work</p>
+          <p className="text-sm sm:text-base md:text-md mt-2 px-2 sm:px-0">
+            I'm excited to bring my skills and expertise to your next project! I'm currently available for freelance projects and full-time opportunities. Let's create something amazing together! 🚀
+          </p>
         </div>
 
       </div>
