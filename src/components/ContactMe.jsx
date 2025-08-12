@@ -116,7 +116,7 @@ const ContactMe = () => {
           </p>
           <button
             type="button"
-            className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition duration-300"
+            className="mt-6 inline-block bg-slate-950 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-md transition duration-300"
             onClick={() => {
               window.location.href = "mailto:ichukwunicholasagbo@email.com";
             }}
