@@ -45,15 +45,21 @@ const HeroSection = () => {
           >
             <a
               href="#work"
-              className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-500"
+              className="relative overflow-hidden bg-blue-600 text-white px-6 py-2 rounded-full font-medium
+                        before:absolute before:inset-0 before:bg-blue-800 before:translate-x-[-100%]
+                        before:transition-transform before:duration-500 hover:before:translate-x-0"
             >
-              View Work
+              <span className="relative z-10">View Work</span>
             </a>
+            
             <a
               href="#contact"
-              className="border border-white hover:bg-white hover:text-slate-950 px-6 py-2 rounded-full font-medium transition duration-500"
+              className="relative overflow-hidden border border-white text-white px-6 py-2 rounded-full font-medium
+                        before:absolute before:inset-0 before:bg-white before:translate-x-[-100%]
+                        before:transition-transform before:duration-500 hover:before:translate-x-0
+                        hover:text-slate-950"
             >
-              Get in Touch
+              <span className="relative z-10">Get in Touch</span>
             </a>
           </motion.div>
 

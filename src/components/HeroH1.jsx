@@ -19,7 +19,6 @@ const messages = [
   { line1: "Turning Complex", line2: "Challenges", line3: "Into Seamless Systems" },
   { line1: "Building High-Impact", line2: "Digital Products", line3: "That Scale" },
   { line1: "Translating Ideas", line2: "Into Code", line3: "That Drives Business" },
-  { line1: "Delivering Software", line2: "Ahead of Schedule", line3: "Without Compromise" },
   { line1: "Creating Clean", line2: "Maintainable Code", line3: "That Lasts" },
   { line1: "Designing for", line2: "User Experience", line3: "And Performance" },
   { line1: "Optimizing Systems", line2: "For Speed", line3: "And Scalability" },
