@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
 
+const colors = [
+  "text-blue-600",
+  "text-red-500",
+  "text-green-500",
+  "text-purple-500",
+  "text-yellow-500",
+  "text-pink-500"
+];
+
 const messages = [
   { line1: "Building Digital", line2: "Experiences", line3: "That Matter" },
   { line1: "Designing Solutions", line2: "For Real World", line3: "Problems" },
@@ -18,6 +27,7 @@ const HeroH1 = () => {
   const [messageIndex, setMessageIndex] = useState(0);
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const [colorIndex, setColorIndex] = useState(0);
 
   useEffect(() => {
     const currentMessage = [
@@ -32,7 +42,8 @@ const HeroH1 = () => {
         setLineIndex(0);
         setCharIndex(0);
         setMessageIndex((prev) => (prev + 1) % messages.length);
-      }, 8000); 
+        setColorIndex((prev) => (prev + 1) % colors.length);
+      }, 8000);
       return () => clearTimeout(pauseTimeout);
     }
 
@@ -47,7 +58,6 @@ const HeroH1 = () => {
       }, 80);
       return () => clearTimeout(typingTimeout);
     } else {
-      
       const linePause = setTimeout(() => {
         setLineIndex((prev) => prev + 1);
         setCharIndex(0);
@@ -63,7 +73,7 @@ const HeroH1 = () => {
       </p>
       <h2 className="text-4xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug">
         {displayedText[0]} <br />
-        <span className="text-blue-600">{displayedText[1]}</span> <br />
+        <span className={colors[colorIndex]}>{displayedText[1]}</span> <br />
         {displayedText[2]}
       </h2>
     </>
