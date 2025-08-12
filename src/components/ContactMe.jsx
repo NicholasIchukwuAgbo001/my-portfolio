@@ -108,12 +108,21 @@ const ContactMe = () => {
           </div>
         </div>
 
-        <div className="bg-green-100 text-green-800 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-md max-w-full sm:max-w-xl md:max-w-lg mx-auto text-center shadow-lg hover:shadow-xl transition duration-300">
+        <div className="bg-green-100 text-green-800 px-4 sm:px-6 md:px-8 py-6 sm:py-8 rounded-md max-w-full sm:max-w-xl md:max-w-lg mx-auto text-center shadow-lg hover:shadow-xl transition duration-300">
           <p className="font-extrabold text-lg sm:text-xl md:text-2xl">🌟 Let's Collaborate! 🌟</p>
           <p className="font-semibold text-base sm:text-lg md:text-xl mt-1">✅ Available for Work</p>
           <p className="text-sm sm:text-base md:text-md mt-2 px-2 sm:px-0">
             I'm excited to bring my skills and expertise to your next project! I'm currently available for freelance projects and full-time opportunities. Let's create something amazing together! 🚀
           </p>
+          <button
+            type="button"
+            className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition duration-300"
+            onClick={() => {
+              window.location.href = "mailto:ichukwunicholasagbo@email.com";
+            }}
+          >
+            Get in Touch
+          </button>
         </div>
 
       </div>
