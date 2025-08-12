@@ -11,18 +11,16 @@ const colors = [
 
 const messages = [
   { line1: "Building Digital", line2: "Experiences", line3: "That Matter" },
+  { line1: "Turning Ambition", line2: "Into Innovation", line3: "Through Code" },
   { line1: "Designing Solutions", line2: "For Real World", line3: "Problems" },
   { line1: "Crafting Clean", line2: "and Scalable", line3: "Code" },
   { line1: "Transforming Ideas", line2: "Into", line3: "Reality" },
   { line1: "Delivering Quality", line2: "Software", line3: "On Time" },
   { line1: "Engineering Elegant", line2: "Solutions", line3: "That Deliver Results" },
-  { line1: "Turning Complex", line2: "Challenges", line3: "Into Seamless Systems" },
-  { line1: "Building High-Impact", line2: "Digital Products", line3: "That Scale" },
   { line1: "Translating Ideas", line2: "Into Code", line3: "That Drives Business" },
   { line1: "Creating Clean", line2: "Maintainable Code", line3: "That Lasts" },
   { line1: "Designing for", line2: "User Experience", line3: "And Performance" },
   { line1: "Optimizing Systems", line2: "For Speed", line3: "And Scalability" },
-  { line1: "Turning Ambition", line2: "Into Innovation", line3: "Through Code" }
 ];
 
 const HeroH1 = () => {
