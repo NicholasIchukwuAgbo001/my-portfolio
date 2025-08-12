@@ -39,7 +39,7 @@ const ContactMe = () => {
 
               <p className="text-stone-300 flex items-center gap-2 text-center sm:text-left">
                 <FaPhoneAlt className="text-blue-400" />
-                +234 705 858 7063
+                +234 705 870 5863
               </p>
             </div>
           </div>
