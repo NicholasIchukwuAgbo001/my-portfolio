@@ -15,11 +15,15 @@ const messages = [
   { line1: "Crafting Clean", line2: "and Scalable", line3: "Code" },
   { line1: "Transforming Ideas", line2: "Into", line3: "Reality" },
   { line1: "Delivering Quality", line2: "Software", line3: "On Time" },
-  { line1: "Turning Ideas", line2: "Into Digital", line3: "Masterpieces" },
-  { line1: "Building Fast", line2: "Scalable", line3: "Web Apps" },
-  { line1: "Designing Clean", line2: "User-Friendly", line3: "Interfaces" },
-  { line1: "Creating Software", line2: "That Solves", line3: "Real Problems" },
-  { line1: "Delivering Code", line2: "With Precision", line3: "And Passion" }
+  { line1: "Engineering Elegant", line2: "Solutions", line3: "That Deliver Results" },
+  { line1: "Turning Complex", line2: "Challenges", line3: "Into Seamless Systems" },
+  { line1: "Building High-Impact", line2: "Digital Products", line3: "That Scale" },
+  { line1: "Translating Ideas", line2: "Into Code", line3: "That Drives Business" },
+  { line1: "Delivering Software", line2: "Ahead of Schedule", line3: "Without Compromise" },
+  { line1: "Creating Clean", line2: "Maintainable Code", line3: "That Lasts" },
+  { line1: "Designing for", line2: "User Experience", line3: "And Performance" },
+  { line1: "Optimizing Systems", line2: "For Speed", line3: "And Scalability" },
+  { line1: "Turning Ambition", line2: "Into Innovation", line3: "Through Code" }
 ];
 
 const HeroH1 = () => {
