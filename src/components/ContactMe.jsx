@@ -29,7 +29,7 @@ const ContactMe = () => {
 
               <p className="text-stone-300 flex items-center gap-2 text-center sm:text-left">
                 <FaMapMarkerAlt className="text-blue-400" />
-                No: 12, Epetedo, Lagos
+                No: 12 Epetedo st, Lagos State, Nigeria
               </p>
 
               <p className="text-stone-300 flex items-center gap-2 text-center sm:text-left">
