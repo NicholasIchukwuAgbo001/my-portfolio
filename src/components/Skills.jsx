@@ -9,15 +9,18 @@ const frontendSkills = [
   { name: "Tailwind CSS", level: 99, color: "bg-cyan-500" },
   { name: "JavaScript", level: 90, color: "bg-amber-500" },
   { name: "Framer Motion", level: 80, color: "bg-rose-400" },
+  { name: "React Native", level: 95, color: "bg-indigo-600" },
+  { name: "Flutter", level: 80, color: "bg-blue-400" },
 ];
 
 const backendSkills = [
   { name: "Node.js", level: 90, color: "bg-green-600" },
   { name: "Java", level: 80, color: "bg-slate-500" },
   { name: "Python", level: 65, color: "bg-indigo-500" },
+  { name: "Dart", level: 75, color: "bg-blue-700" }, 
   { name: "GraphQL", level: 50, color: "bg-fuchsia-500" },
   { name: "REST APIs", level: 85, color: "bg-orange-500" },
-  { name: "Go", level: 65, color: "bg-blue-800"},
+  { name: "Go", level: 65, color: "bg-blue-800" },
 ];
 
 const dataBaseSkills = [
