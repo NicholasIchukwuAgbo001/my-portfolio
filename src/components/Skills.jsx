@@ -28,6 +28,7 @@ const dataBaseSkills = [
   { name: "Firebase", level: 90, color: "bg-yellow-500" },
   { name: "Supabase", level: 100, color: "bg-lime-500" },
   { name: "MySQL", level: 65, color: "bg-teal-500" },
+  { name: "Neon", level: 95, color: "bg-green-400"}
 ];
 
 const hostingSkills = [
