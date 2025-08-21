@@ -1,10 +1,9 @@
 import ProjectCard from "./ProjectCards";
-
 const projects = [
   {
     title: "Hotel Management System",
     description:
-      "A full-stack hotel reservation and administration platform featuring secure user authentication, real-time room availability tracking, and an intuitive booking interface. Built with Next.js, Tailwind CSS, and Supabase for seamless performance and scalability.",
+      "A full-stack hotel reservation and administration platform featuring secure user authentication, real-time room availability tracking, and an intuitive booking interface. Includes booking management, admin dashboards for room control, and responsive design for seamless use across devices. Built with Next.js, Tailwind CSS, and Supabase for reliability, performance, and scalability.",
     imageUrl: "project-1.png",
     tags: ["Next.js", "Tailwind", "Supabase"],
     demoLink: "https://the-nikos-hotel-website.vercel.app",
@@ -23,19 +22,20 @@ const projects = [
   {
     title: "E-commerce Website",
     description:
-    "A modern, responsive e-commerce platform featuring dynamic product listings, integrated shopping cart functionality, and advanced Redux Toolkit state management. Built with a sleek Tailwind CSS interface for smooth browsing, it offers optimized performance, mobile-friendly design, and a scalable architecture ready for future expansion.",
+      "A modern, responsive e-commerce platform featuring dynamic product listings, integrated shopping cart functionality, and advanced Redux Toolkit state management. Built with a sleek Tailwind CSS interface for smooth browsing, it offers optimized performance, mobile-friendly design, and a scalable architecture ready for future expansion.",
     imageUrl: "project-2.png",
     tags: ["React", "Tailwind", "Redux Toolkit"],
     codeLink: "https://github.com/NicholasIchukwuAgbo001/e-commerce-app.git",
   },
   {
-    title: "World-Wise System",
+    title: "Expense Tracker",
     description:
-    "A travel tracking web app that allows users to log cities they’ve visited, attach personal notes, and record visit dates. Features an interactive world map for visualizing journeys, responsive design with Tailwind CSS, and state management using Redux Toolkit for smooth performance and seamless user experience.",
-    imageUrl: "project-3.png",
-    tags: ["React", "Tailwind", "Redux Toolkit", "Java"],
-    codeLink: "https://github.com/NicholasIchukwuAgbo001/world-wise.git",
-  },
+      "A full-stack expense tracker with Clerk authentication, income/expense management, balance summaries, and AI-powered insights using OpenAI for expense analysis and charts. Built with Next.js, Prisma, Neon, and Tailwind CSS for scalability and responsive design.",
+    imageUrl: "project-5.png",
+    tags: ["Next.js", "Tailwind", "Clerk", "Prisma", "Neon", "OpenAI"],
+    demoLink: "https://niko-tech-expense-tracker.vercel.app",
+    codeLink: "https://github.com/NicholasIchukwuAgbo001/Expense-Tracker-2.0.git",
+  }
 ];
 
 const ProjectLists = () => {
