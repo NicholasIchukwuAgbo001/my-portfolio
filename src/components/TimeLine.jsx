@@ -22,7 +22,7 @@ const TimeLine = () => {
         "Worked on full-stack applications, contributed to open-source projects, and strengthened collaboration and version control skills using Git and GitHub. Focused on writing clean, maintainable code and working in team-based environments.",
     },
     {
-      year: "2025",
+      year: "2024",
       title: "Becoming a Software Engineer",
       taught: "Semicolon Africa",
       description:
