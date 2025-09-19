@@ -26,7 +26,7 @@ const TimeLine = () => {
       title: "Frontend Engineer",
       taught: "Hyperbird Technologies",
       description:
-        "Worked on building and optimizing responsive, accessible, and high-performance web applications. Implemented component-driven architecture, state management with Redux/Context, API integrations, and collaborated with designers to deliver modern, user-friendly interfaces.",
+        "Worked on building and optimizing responsive, accessible, and high performance web applications. Implemented component driven architecture, state management with Redux/Context, API integrations, and collaborated with designers to deliver modern, user friendly interfaces.",
     },
     {
       year: "2024",
