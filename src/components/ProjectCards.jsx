@@ -21,10 +21,8 @@ const ProjectCards = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
     >
-      {/* Gradient overlay for image */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70 z-10 pointer-events-none"></div>
 
-      {/* Project Image with enhanced animation */}
       <motion.div
         className="relative overflow-hidden h-48"
         whileHover="hover"
@@ -40,7 +38,6 @@ const ProjectCards = ({
           transition={{ duration: 0.4, ease: "easeOut" }}
         />
 
-        {/* Image overlay with animated gradient */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"
           initial={{ opacity: 0.7 }}
@@ -49,9 +46,7 @@ const ProjectCards = ({
         />
       </motion.div>
 
-      {/* Project Content */}
       <div className="p-5 space-y-4 relative z-20">
-        {/* Title with animated underline */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -76,7 +71,6 @@ const ProjectCards = ({
           </motion.h3>
         </motion.div>
 
-        {/* Description with fade effect */}
         <motion.p
           className="text-sm text-stone-300"
           initial={{ opacity: 0 }}
@@ -87,7 +81,6 @@ const ProjectCards = ({
           {description}
         </motion.p>
 
-        {/* Tags with enhanced animation */}
         <motion.div
           className="flex flex-wrap gap-2"
           initial={{ opacity: 0 }}
@@ -113,7 +106,6 @@ const ProjectCards = ({
           ))}
         </motion.div>
 
-        {/* Links with enhanced buttons */}
         <motion.div
           className="flex gap-4 pt-2"
           initial={{ opacity: 0 }}

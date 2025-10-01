@@ -9,44 +9,79 @@ const Header = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-slate-950 sticky top-0 z-50 shadow-[0_4px_6px_-1px_rgba(37,99,235,0.5)] hover:shadow-[0_6px_12px_-2px_rgba(37,99,235,0.7)]"> 
-      
-    <motion.a
-      initial={{ scale: 1 }}
-      animate={{ scale: [1, 1.05, 1] }}
-      transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      className="text-blue-600 text-base md:text-lg font-bold tracking-wide cursor-pointer whitespace-nowrap"
-    >
-      &lt;/&gt; I_AM NICHOLAS
-    </motion.a>
+    <header className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-slate-950 sticky top-0 z-50 shadow-[0_4px_6px_-1px_rgba(37,99,235,0.5)] hover:shadow-[0_6px_12px_-2px_rgba(37,99,235,0.7)] backdrop-blur-sm bg-slate-950/90">
+      <motion.a
+        initial={{ scale: 1 }}
+        animate={{
+          scale: [1, 1.05, 1],
+          textShadow: [
+            "0 0 0px rgba(59, 130, 246, 0.5)",
+            "0 0 10px rgba(59, 130, 246, 0.8)",
+            "0 0 0px rgba(59, 130, 246, 0.5)",
+          ],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.5, 1],
+        }}
+        className="text-blue-500 text-base md:text-lg font-bold tracking-wide cursor-pointer whitespace-nowrap"
+        whileHover={{
+          scale: 1.1,
+          color: "#60a5fa",
+          textShadow: "0 0 15px rgba(59, 130, 246, 1)",
+        }}
+        whileTap={{ scale: 0.95 }}
+      >
+        &lt;/&gt; I_AM NICHOLAS
+      </motion.a>
 
       <div className="hidden md:flex">
         <NavBar />
       </div>
 
       <div className="md:hidden">
-        <button
+        <motion.button
           onClick={toggleMenu}
           className="text-blue-500 text-2xl focus:outline-none"
+          whileHover={{
+            scale: 1.2,
+            rotate: [0, -10, 10, 0],
+            color: "#60a5fa",
+          }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
         >
           {isOpen ? <FiX /> : <FiMenu />}
-        </button>
+        </motion.button>
       </div>
 
-      <div
+      <motion.div
         className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isOpen ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
       >
-        <div
+        <motion.div
           className="absolute inset-0 bg-black bg-opacity-50"
           onClick={() => setIsOpen(false)}
-        ></div>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        ></motion.div>
 
-        <div className="absolute left-0 top-0 h-full w-64 bg-slate-900 p-6 shadow-lg">
+        <motion.div
+          className="absolute left-0 top-0 h-full w-64 bg-slate-900 p-6 shadow-lg"
+          initial={{ x: -100 }}
+          animate={{ x: isOpen ? 0 : -100 }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        >
           <NavBar onItemClick={() => setIsOpen(false)} />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </header>
   );
 };

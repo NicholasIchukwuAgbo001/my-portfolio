@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import OtherSkills from "./OtherSkills";
-import { FaCode, FaDatabase, FaServer, FaCloud } from "react-icons/fa"
+import { FaCode, FaDatabase, FaServer, FaCloud } from "react-icons/fa";
 
 const frontendSkills = [
   { name: "React", level: 95, color: "bg-sky-600" },
@@ -17,7 +18,7 @@ const backendSkills = [
   { name: "Node.js", level: 90, color: "bg-green-600" },
   { name: "Java", level: 80, color: "bg-slate-500" },
   { name: "Python", level: 65, color: "bg-indigo-500" },
-  { name: "Dart", level: 75, color: "bg-blue-700" }, 
+  { name: "Dart", level: 75, color: "bg-blue-700" },
   { name: "GraphQL", level: 50, color: "bg-fuchsia-500" },
   { name: "REST APIs", level: 85, color: "bg-orange-500" },
   { name: "Go", level: 65, color: "bg-blue-800" },
@@ -28,7 +29,7 @@ const dataBaseSkills = [
   { name: "Firebase", level: 90, color: "bg-yellow-500" },
   { name: "Supabase", level: 100, color: "bg-lime-500" },
   { name: "MySQL", level: 65, color: "bg-teal-500" },
-  { name: "Neon", level: 95, color: "bg-green-400"}
+  { name: "Neon", level: 95, color: "bg-green-400" },
 ];
 
 const hostingSkills = [
@@ -44,9 +45,9 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const itemVariants = {
@@ -55,14 +56,14 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const SkillBar = ({ skill }) => {
   return (
-    <motion.div 
+    <motion.div
       className="mb-5"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -87,45 +88,48 @@ const SkillBar = ({ skill }) => {
 };
 
 const Skills = () => {
+  const [showAdditional, setShowAdditional] = useState(false);
+
   return (
     <section className="md:pt-20 py-4">
-      <motion.div 
+      <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={containerVariants}
       >
-        <motion.p 
+        <motion.p
           className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2"
           variants={itemVariants}
         >
           Technical Expertise
         </motion.p>
 
-        <motion.h2 
+        <motion.h2
           className="text-3xl sm:text-4xl font-bold mb-4"
           variants={itemVariants}
         >
           Skills & <span className="text-blue-500">Technologies</span>
         </motion.h2>
 
-        <motion.p 
+        <motion.p
           className="text-stone-300 max-w-2xl mx-auto text-sm sm:text-base mb-10"
           variants={itemVariants}
         >
-          These are the tools and technologies I use regularly to build responsive web applications.
+          These are the tools and technologies I use regularly to build
+          responsive web applications.
         </motion.p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={containerVariants}
       >
-        <motion.div 
+        <motion.div
           className="bg-white rounded-2xl shadow-md p-6 md:p-8"
           variants={itemVariants}
           whileHover={{ y: -10, transition: { duration: 0.3 } }}
@@ -144,7 +148,7 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="bg-white rounded-2xl shadow-md p-6 md:p-8"
           variants={itemVariants}
           whileHover={{ y: -10, transition: { duration: 0.3 } }}
@@ -163,46 +167,85 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <motion.div 
-          className="bg-white rounded-2xl shadow-md p-6 md:p-8"
-          variants={itemVariants}
-          whileHover={{ y: -10, transition: { duration: 0.3 } }}
-        >
-          <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
-            <FaDatabase className="text-green-500" />
-            Database
-          </h3>
-          <p className="text-sm text-gray-500 mb-6">
-            Managing and optimizing data storage
-          </p>
-          <div className="space-y-4">
-            {dataBaseSkills.map((skill, index) => (
-              <SkillBar key={index} skill={skill} />
-            ))}
-          </div>
-        </motion.div>
+        {showAdditional && (
+          <>
+            <motion.div
+              className="bg-white rounded-2xl shadow-md p-6 md:p-8"
+              variants={itemVariants}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
+                <FaDatabase className="text-green-500" />
+                Database
+              </h3>
+              <p className="text-sm text-gray-500 mb-6">
+                Managing and optimizing data storage
+              </p>
+              <div className="space-y-4">
+                {dataBaseSkills.map((skill, index) => (
+                  <SkillBar key={index} skill={skill} />
+                ))}
+              </div>
+            </motion.div>
 
-        <motion.div 
-          className="bg-white rounded-2xl shadow-md p-6 md:p-8"
-          variants={itemVariants}
-          whileHover={{ y: -10, transition: { duration: 0.3 } }}
-        >
-          <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
-            <FaCloud className="text-purple-500" />
-            DevOps
-          </h3>
-          <p className="text-sm text-gray-500 mb-6">
-            Deploying and scaling applications
-          </p>
-          <div className="space-y-4">
-            {hostingSkills.map((skill, index) => (
-              <SkillBar key={index} skill={skill} />
-            ))}
-          </div>
-        </motion.div>
+            <motion.div
+              className="bg-white rounded-2xl shadow-md p-6 md:p-8"
+              variants={itemVariants}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
+                <FaCloud className="text-purple-500" />
+                DevOps
+              </h3>
+              <p className="text-sm text-gray-500 mb-6">
+                Deploying and scaling applications
+              </p>
+              <div className="space-y-4">
+                {hostingSkills.map((skill, index) => (
+                  <SkillBar key={index} skill={skill} />
+                ))}
+              </div>
+            </motion.div>
+          </>
+        )}
       </motion.div>
 
-      <motion.div 
+      <motion.div
+        className="flex justify-center mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <button
+          onClick={() => setShowAdditional(!showAdditional)}
+          className="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2"
+        >
+          {showAdditional ? "Show Less" : "Show More Skills"}
+          <svg
+            className={`w-4 h-4 transition-transform duration-300 ${
+              showAdditional ? "rotate-180" : ""
+            }`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+      </motion.div>
+
+      <motion.div
         className="flex flex-col justify-center items-center pt-10 gap-5"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
