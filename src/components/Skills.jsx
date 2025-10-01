@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import OtherSkills from "./OtherSkills";
 import { FaCode, FaDatabase, FaServer, FaCloud } from "react-icons/fa"
 
@@ -39,85 +39,97 @@ const hostingSkills = [
   { name: "AWS", level: 80, color: "bg-orange-500" },
 ];
 
-
-const SkillBar = ({ skill, animate }) => {
-  const [width, setWidth] = useState("0%");
-
-  useEffect(() => {
-    if (animate) {
-      const timeout = setTimeout(() => {
-        setWidth(`${skill.level}%`);
-      }, 150);
-      return () => clearTimeout(timeout);
-    } else {
-      setWidth("0%");
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
     }
-  }, [animate, skill.level]);
+  }
+};
 
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
+const SkillBar = ({ skill }) => {
   return (
-    <div className="mb-5">
+    <motion.div 
+      className="mb-5"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex justify-between text-sm font-medium mb-1 text-slate-700">
         <span>{skill.name}</span>
         <span>{skill.level}%</span>
       </div>
       <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden">
-        <div
+        <motion.div
           className={`h-2.5 ${skill.color} transition-all duration-1000 ease-out`}
-          style={{ width }}
+          initial={{ width: 0 }}
+          whileInView={{ width: `${skill.level}%` }}
+          viewport={{ once: false }}
+          transition={{ duration: 1, ease: "easeOut" }}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Skills = () => {
-  const ref = useRef(null);
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const section = ref.current;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsInView(true);
-        } else {
-          setIsInView(false);
-        }
-      },
-      {
-        threshold: 0.2,
-      }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) observer.unobserve(section);
-    };
-  }, []);
-
   return (
-    <section ref={ref} className="md:pt-20 py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2">
+    <section className="md:pt-20 py-4">
+      <motion.div 
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        variants={containerVariants}
+      >
+        <motion.p 
+          className="text-blue-500 font-semibold uppercase tracking-wider text-sm sm:text-base mb-2"
+          variants={itemVariants}
+        >
           Technical Expertise
-        </p>
+        </motion.p>
 
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <motion.h2 
+          className="text-3xl sm:text-4xl font-bold mb-4"
+          variants={itemVariants}
+        >
           Skills & <span className="text-blue-500">Technologies</span>
-        </h2>
+        </motion.h2>
 
-        <p className="text-stone-300 max-w-2xl mx-auto text-sm sm:text-base mb-10">
+        <motion.p 
+          className="text-stone-300 max-w-2xl mx-auto text-sm sm:text-base mb-10"
+          variants={itemVariants}
+        >
           These are the tools and technologies I use regularly to build responsive web applications.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+      <motion.div 
+        className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        variants={containerVariants}
+      >
+        <motion.div 
+          className="bg-white rounded-2xl shadow-md p-6 md:p-8"
+          variants={itemVariants}
+          whileHover={{ y: -10, transition: { duration: 0.3 } }}
+        >
           <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
             <FaCode className="text-yellow-500" />
             Frontend
@@ -127,12 +139,16 @@ const Skills = () => {
           </p>
           <div className="space-y-4">
             {frontendSkills.map((skill, index) => (
-              <SkillBar key={index} skill={skill} animate={isInView} />
+              <SkillBar key={index} skill={skill} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+        <motion.div 
+          className="bg-white rounded-2xl shadow-md p-6 md:p-8"
+          variants={itemVariants}
+          whileHover={{ y: -10, transition: { duration: 0.3 } }}
+        >
           <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
             <FaServer className="text-red-500" />
             Backend
@@ -142,12 +158,16 @@ const Skills = () => {
           </p>
           <div className="space-y-4">
             {backendSkills.map((skill, index) => (
-              <SkillBar key={index} skill={skill} animate={isInView} />
+              <SkillBar key={index} skill={skill} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+        <motion.div 
+          className="bg-white rounded-2xl shadow-md p-6 md:p-8"
+          variants={itemVariants}
+          whileHover={{ y: -10, transition: { duration: 0.3 } }}
+        >
           <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
             <FaDatabase className="text-green-500" />
             Database
@@ -157,12 +177,16 @@ const Skills = () => {
           </p>
           <div className="space-y-4">
             {dataBaseSkills.map((skill, index) => (
-              <SkillBar key={index} skill={skill} animate={isInView} />
+              <SkillBar key={index} skill={skill} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+        <motion.div 
+          className="bg-white rounded-2xl shadow-md p-6 md:p-8"
+          variants={itemVariants}
+          whileHover={{ y: -10, transition: { duration: 0.3 } }}
+        >
           <h3 className="text-xl text-blue-600 font-semibold flex items-center gap-2 mb-3">
             <FaCloud className="text-purple-500" />
             DevOps
@@ -172,18 +196,23 @@ const Skills = () => {
           </p>
           <div className="space-y-4">
             {hostingSkills.map((skill, index) => (
-              <SkillBar key={index} skill={skill} animate={isInView} />
+              <SkillBar key={index} skill={skill} />
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="flex flex-col justify-center items-center pt-10 gap-5">
+      <motion.div 
+        className="flex flex-col justify-center items-center pt-10 gap-5"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8 }}
+      >
         <h2 className="text-stone-300 text-lg font-mono">Also Working With</h2>
         <OtherSkills />
-      </div>
+      </motion.div>
     </section>
-
   );
 };
 

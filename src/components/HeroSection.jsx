@@ -17,7 +17,7 @@ const textVariant = {
 
 const HeroSection = () => {
   return (
-    <section className="text-white pb-10 pt-10">
+    <section className="text-white pb-10 pt-10 relative overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-16">
         <motion.div
           initial="hidden"
@@ -43,24 +43,28 @@ const HeroSection = () => {
             variants={textVariant}
             className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2 pb-6 sm:pb-8"
           >
-            <a
+            <motion.a
               href="#work"
               className="relative overflow-hidden bg-blue-600 text-white px-5 sm:px-6 py-2 rounded-full font-medium
                         before:absolute before:inset-0 before:bg-blue-800 before:-translate-x-full
                         before:transition-transform before:duration-500 hover:before:translate-x-0"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">View Work</span>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href="#contact"
               className="relative overflow-hidden border border-white text-white px-5 sm:px-6 py-2 rounded-full font-medium
                         before:absolute before:inset-0 before:bg-white before:-translate-x-full
                         before:transition-transform before:duration-500 hover:before:translate-x-0
                         hover:text-slate-950"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">Get in Touch</span>
-            </a>
+            </motion.a>
           </motion.div>
 
           <motion.div
@@ -78,32 +82,58 @@ const HeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="flex flex-col items-center gap-5 sm:gap-6"
         >
-      
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base font-mono"
           >
-            <span className="bg-blue-500 text-white px-3 py-1 rounded-full">React</span>
-            <span className="bg-gray-900 text-white px-3 py-1 rounded-full">Next.js</span>
-            <span className="bg-green-700 text-white px-3 py-1 rounded-full">Node.js</span>
-            <span className="bg-yellow-400 text-black px-3 py-1 rounded-full">JavaScript</span>
-            <span className="bg-blue-700 text-white px-3 py-1 rounded-full">TypeScript</span>
+            <motion.span
+              className="bg-blue-500 text-white px-3 py-1 rounded-full"
+              whileHover={{ y: -5, backgroundColor: "#3B82F6" }}
+            >
+              React
+            </motion.span>
+            <motion.span
+              className="bg-gray-900 text-white px-3 py-1 rounded-full"
+              whileHover={{ y: -5, backgroundColor: "#111827" }}
+            >
+              Next.js
+            </motion.span>
+            <motion.span
+              className="bg-green-700 text-white px-3 py-1 rounded-full"
+              whileHover={{ y: -5, backgroundColor: "#16A34A" }}
+            >
+              Node.js
+            </motion.span>
+            <motion.span
+              className="bg-yellow-400 text-black px-3 py-1 rounded-full"
+              whileHover={{ y: -5, backgroundColor: "#EAB308" }}
+            >
+              JavaScript
+            </motion.span>
+            <motion.span
+              className="bg-blue-700 text-white px-3 py-1 rounded-full"
+              whileHover={{ y: -5, backgroundColor: "#1D4ED8" }}
+            >
+              TypeScript
+            </motion.span>
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, -10, 0], scale: [1, 1.10, 1] }}
+            animate={{ y: [0, -10, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center py-6 px-8"
           >
             <div className="relative p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-              <img
+              <motion.img
                 src="my-pic.jpg"
                 alt="My Profile"
                 className="w-44 h-44 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover
                           shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)]
-                          hover:scale-105 transition duration-500"
+                          transition duration-500"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               />
             </div>
           </motion.div>
@@ -114,9 +144,24 @@ const HeroSection = () => {
             transition={{ type: "spring", stiffness: 100, delay: 0.5 }}
             className="flex flex-wrap justify-center gap-2 text-lg sm:text-xl md:text-2xl font-bold text-stone-300 tracking-wide items-center"
           >
-            <span className="uppercase text-blue-700 sm:text-2xl md:text-3xl font-serif">Ichukwu</span>
-            <span className="uppercase text-yellow-700 sm:text-3xl md:text-4xl font-serif">Nicholas</span>
-            <span className="uppercase text-blue-700 sm:text-2xl md:text-3xl font-serif">Agbo</span>
+            <motion.span
+              className="uppercase text-blue-700 sm:text-2xl md:text-3xl font-serif"
+              whileHover={{ scale: 1.1 }}
+            >
+              Ichukwu
+            </motion.span>
+            <motion.span
+              className="uppercase text-yellow-700 sm:text-3xl md:text-4xl font-serif"
+              whileHover={{ scale: 1.1 }}
+            >
+              Nicholas
+            </motion.span>
+            <motion.span
+              className="uppercase text-blue-700 sm:text-2xl md:text-3xl font-serif"
+              whileHover={{ scale: 1.1 }}
+            >
+              Agbo
+            </motion.span>
           </motion.div>
         </motion.div>
       </div>
