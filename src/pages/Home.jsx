@@ -1,8 +1,8 @@
-import HeroSection from "../components/HeroSection";
-import Skills from "../components/Skills";
-import ProjectLists from "../components/ProjectLists";
-import About from "../components/About";
-import ContactMe from "../components/ContactMe";
+import HeroSection from "../features/hero/HeroSection";
+import Skills from "../features/skills/Skills";
+import ProjectLists from "../features/projects/ProjectLists";
+import About from "../features/about/About";
+import ContactMe from "../features/contact/ContactMe";
 
 const sections = [
   { id: "home", component: <HeroSection /> },

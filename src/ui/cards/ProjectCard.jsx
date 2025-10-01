@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import Button from "../buttons/Button";
+import Tag from "./Tag";
 
-const ProjectCards = ({
+const ProjectCard = ({
   title,
   description,
   imageUrl,
@@ -89,20 +91,9 @@ const ProjectCards = ({
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {tags.map((tag, index) => (
-            <motion.span
-              key={index}
-              className="text-xs bg-gradient-to-r from-blue-700 to-indigo-800 text-blue-100 px-3 py-1 rounded-full shadow-lg"
-              whileHover={{
-                y: -3,
-                scale: 1.1,
-                boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.3)",
-                background: "linear-gradient(to right, #3B82F6, #4F46E5)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
+            <Tag key={index} variant="accent">
               #{tag}
-            </motion.span>
+            </Tag>
           ))}
         </motion.div>
 
@@ -114,40 +105,22 @@ const ProjectCards = ({
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           {demoLink && (
-            <motion.a
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors duration-300"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => window.open(demoLink, "_blank")}
             >
-              <span>Live Demo</span>
-            </motion.a>
+              Live Demo
+            </Button>
           )}
           {codeLink && (
-            <motion.a
-              href={codeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors duration-300"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 15px -3px rgba(209, 213, 219, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={() => window.open(codeLink, "_blank")}
             >
-              <span>Code</span>
-            </motion.a>
+              Code
+            </Button>
           )}
         </motion.div>
       </div>
@@ -155,4 +128,4 @@ const ProjectCards = ({
   );
 };
 
-export default ProjectCards;
+export default ProjectCard;

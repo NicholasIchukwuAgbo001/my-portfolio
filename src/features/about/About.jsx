@@ -11,12 +11,12 @@ const About = () => {
         <h2 className="text-3xl sm:text-5xl font-bold">
           About <span className="text-blue-600">Me</span>
         </h2>
-       </div>
+      </div>
 
-       <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <Mission />
         <TimeLine />
-       </div>
+      </div>
 
       <div className="max-w-4xl mx-auto px-4 pt-10 text-center">
         <p className="text-stone-400 uppercase tracking-wide text-sm mb-5">

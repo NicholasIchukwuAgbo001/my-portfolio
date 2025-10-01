@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import SocialMedialHandle from "./SocialMedialHandle";
+import SocialMediaHandle from "./SocialMedialHandle";
 import HeroH1 from "./HeroH1";
 
 const textVariant = {
@@ -72,7 +72,7 @@ const HeroSection = () => {
             variants={textVariant}
             className="hidden lg:block"
           >
-            <SocialMedialHandle />
+            <SocialMediaHandle />
           </motion.div>
         </motion.div>
 
