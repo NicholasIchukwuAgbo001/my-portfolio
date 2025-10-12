@@ -59,6 +59,16 @@ export const PROJECTS = [
       "https://github.com/NicholasIchukwuAgbo001/hotel-management-system.git",
   },
   {
+    title: "The Interstellar Atlas",
+    description:
+      "A React-based SPA for exploring global country data via the REST Countries API. Features include region based filtering, live search, client side pagination, border country navigation, persistent data fetching, and responsive design. Built with Vite, Tailwind CSS, React Router, and Zustand for state management.",
+    imageUrl: "project-6.png",
+    tags: ["React", "Vite", "Tailwind", "Zustand", "REST API", "React Router"],
+    demoLink: "https://my-interstellar-atlas.vercel.app",
+    codeLink:
+      "https://github.com/NicholasIchukwuAgbo001/my-interstellar-atlas.git",
+  },
+  {
     title: "Pizza Ordering App",
     description:
       "An interactive pizza ordering platform featuring customizable toppings, dynamic cart management, and real-time order tracking. Built with React and Redux Toolkit, it includes Naira currency formatting, responsive Tailwind CSS design, and an intuitive checkout flow for a seamless user experience.",
