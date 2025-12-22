@@ -51,7 +51,7 @@ export const PROJECTS = [
   {
     title: "Nexa-Funded",
     description:
-      "A modern prediction-trading web app built with Next.js, TypeScript, and Tailwind CSS, featuring a responsive UI, real- time market indicators, and clean, scalable component architecture optimized for performance and usability.",
+      "A modern prediction-trading web app built with Next.js, TypeScript, and Tailwind CSS, featuring a responsive UI, real- time market indicators, and clean., scalable component architecture optimized for performance and usability.",
     imageUrl: "project-1.png",
     tags: ["Next.js", "Tailwind"],
     demoLink: "https://nexafunded.vercel.app",
