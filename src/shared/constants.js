@@ -55,8 +55,7 @@ export const PROJECTS = [
     imageUrl: "project-1.png",
     tags: ["Next.js", "Tailwind"],
     demoLink: "https://nexafunded.vercel.app",
-    codeLink:
-      "https://github.com/NicholasIchukwuAgbo001/nexa-funded-app.git",
+    codeLink: "https://github.com/NicholasIchukwuAgbo001/nexa-funded-app.git",
   },
   {
     title: "The Interstellar Atlas",
@@ -65,8 +64,7 @@ export const PROJECTS = [
     imageUrl: "project-6.png",
     tags: ["React", "Vite", "Tailwind", "Zustand", "REST API", "React Router"],
     demoLink: "https://my-interstellar-atlas.vercel.app",
-    codeLink:
-      "",
+    codeLink: "",
   },
   {
     title: "Pizza Ordering App",
@@ -75,16 +73,16 @@ export const PROJECTS = [
     imageUrl: "project-4.png",
     tags: ["React", "Tailwind", "Redux Toolkit", "JavaScript"],
     demoLink: "https://nikki-s-home-made-pizza.vercel.app/",
-    codeLink:
-      "",
+    codeLink: "",
   },
   {
-    title: "medis-cyan Website",
+    title: "Medis Decentralized Medical Records",
     description:
-      "A modern, responsive e-commerce platform featuring dynamic product listings, integrated shopping cart functionality, and advanced Redux Toolkit state management. Built with a sleek Tailwind CSS interface for smooth browsing, it offers optimized performance, mobile-friendly design, and a scalable architecture ready for future expansion.",
+      "A full-stack decentralized healthcare platform enabling patients to securely own, manage, and share medical records using blockchain technology. Features encrypted medical file storage, role-based access for patients and hospitals, emergency-access records, and wallet-based authentication. Built for security, interoperability, and scalability using modern Web3 and full-stack technologies.",
     imageUrl: "project-2.png",
-    tags: ["React", "Tailwind", "Redux Toolkit"],
-    codeLink: "https://github.com/NicholasIchukwuAgbo001/e-commerce-app.git",
+    tags: ["Next.js", "Tailwind CSS", "Sui Blockchain", "Move", "IPFS"],
+    demoLink: "https://medis-cyan.vercel.app/",
+    codeLink: "https://github.com/Wisdom2788/MEDIS-HACKER-HOUSE-PROJECT.git",
   },
 ];
 
