@@ -23,7 +23,7 @@ export const ANIMATION_VARIANTS = {
 export const SOCIAL_LINKS = [
   {
     name: "GitHub",
-    url: "https://github.com/NicholasIchukwuAgbo001",
+    url: "https://github.com/NicholasIchukwuAgbo00",
   },
   {
     name: "LinkedIn",
