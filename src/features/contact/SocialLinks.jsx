@@ -58,7 +58,7 @@ const SocialLinks = () => {
     {
       name: "Email",
       icon: <FaEnvelope className="text-xl" />,
-      url: "mailto:ichukwunicholasagbo@email.com",
+      url: "mailto:wisdombrightuzoma@email.com",
       bgColor: "bg-gray-200",
       hoverBgColor: "bg-gray-300",
       textColor: "text-black",

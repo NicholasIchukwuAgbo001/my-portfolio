@@ -34,7 +34,7 @@ const Header = () => {
         }}
         whileTap={{ scale: 0.95 }}
       >
-        &lt;/&gt; I_AM NICHOLAS
+        &lt;/&gt; I_AM Wisdom
       </motion.a>
 
       <div className="hidden md:flex">

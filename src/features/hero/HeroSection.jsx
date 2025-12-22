@@ -127,7 +127,7 @@ const HeroSection = () => {
           >
             <div className="relative p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
               <motion.img
-                src="my-pic.jpg"
+                src="my-pic.jpeg"
                 alt="My Profile"
                 className="w-44 h-44 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover
                           shadow-[0_0_20px_6px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_8px_rgba(37,99,235,0.7)]
@@ -148,19 +148,19 @@ const HeroSection = () => {
               className="uppercase text-blue-700 sm:text-2xl md:text-3xl font-serif"
               whileHover={{ scale: 1.1 }}
             >
-              Ichukwu
+              Wisdom
             </motion.span>
             <motion.span
               className="uppercase text-yellow-700 sm:text-3xl md:text-4xl font-serif"
               whileHover={{ scale: 1.1 }}
             >
-              Nicholas
+              Chukwuemeka
             </motion.span>
             <motion.span
               className="uppercase text-blue-700 sm:text-2xl md:text-3xl font-serif"
               whileHover={{ scale: 1.1 }}
             >
-              Agbo
+              Uzoma
             </motion.span>
           </motion.div>
         </motion.div>

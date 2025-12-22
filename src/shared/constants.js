@@ -35,7 +35,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "Email",
-    url: "mailto:ichukwunicholasagbo@email.com",
+    url: "mailto:wisdombrightuzoma@email.com",
   },
   {
     name: "WhatsApp",
@@ -49,14 +49,14 @@ export const SOCIAL_LINKS = [
 
 export const PROJECTS = [
   {
-    title: "Hotel Management System",
+    title: "Nexa-Funded",
     description:
-      "A full-stack hotel reservation and administration platform featuring secure user authentication, real-time room availability tracking, and an intuitive booking interface. Includes booking management, admin dashboards for room control, and responsive design for seamless use across devices. Built with Next.js, Tailwind CSS, and Supabase for reliability, performance, and scalability.",
+      "A modern prediction-trading web app built with Next.js, TypeScript, and Tailwind CSS, featuring a responsive UI, real- time market indicators, and clean, scalable component architecture optimized for performance and usability.",
     imageUrl: "project-1.png",
-    tags: ["Next.js", "Tailwind", "Supabase"],
-    demoLink: "https://the-nikos-hotel-website.vercel.app",
+    tags: ["Next.js", "Tailwind"],
+    demoLink: "https://nexafunded.vercel.app",
     codeLink:
-      "https://github.com/NicholasIchukwuAgbo001/hotel-management-system.git",
+      "https://github.com/NicholasIchukwuAgbo001/nexa-funded-app.git",
   },
   {
     title: "The Interstellar Atlas",
@@ -66,7 +66,7 @@ export const PROJECTS = [
     tags: ["React", "Vite", "Tailwind", "Zustand", "REST API", "React Router"],
     demoLink: "https://my-interstellar-atlas.vercel.app",
     codeLink:
-      "https://github.com/NicholasIchukwuAgbo001/my-interstellar-atlas.git",
+      "",
   },
   {
     title: "Pizza Ordering App",
@@ -76,25 +76,15 @@ export const PROJECTS = [
     tags: ["React", "Tailwind", "Redux Toolkit", "JavaScript"],
     demoLink: "https://nikki-s-home-made-pizza.vercel.app/",
     codeLink:
-      "https://github.com/NicholasIchukwuAgbo001/Nikki-s-home-made-pizza.git",
+      "",
   },
   {
-    title: "E-commerce Website",
+    title: "medis-cyan Website",
     description:
       "A modern, responsive e-commerce platform featuring dynamic product listings, integrated shopping cart functionality, and advanced Redux Toolkit state management. Built with a sleek Tailwind CSS interface for smooth browsing, it offers optimized performance, mobile-friendly design, and a scalable architecture ready for future expansion.",
     imageUrl: "project-2.png",
     tags: ["React", "Tailwind", "Redux Toolkit"],
     codeLink: "https://github.com/NicholasIchukwuAgbo001/e-commerce-app.git",
-  },
-  {
-    title: "Expense Tracker",
-    description:
-      "A full-stack expense tracker with Clerk authentication, income/expense management, balance summaries, and AI-powered insights using OpenAI for expense analysis and charts. Built with Next.js, Prisma, Neon, and Tailwind CSS for scalability and responsive design.",
-    imageUrl: "project-5.png",
-    tags: ["Next.js", "Tailwind", "Clerk", "Prisma", "Neon", "OpenAI"],
-    demoLink: "https://niko-tech-expense-tracker.vercel.app",
-    codeLink:
-      "https://github.com/NicholasIchukwuAgbo001/Expense-Tracker-2.0.git",
   },
 ];
 
