@@ -54,7 +54,6 @@ export const PROJECTS = [
       "A full-stack hotel reservation and administration platform featuring secure user authentication, real-time room availability tracking, and an intuitive booking interface. Includes booking management, admin dashboards for room control, and responsive design for seamless use across devices. Built with Next.js, Tailwind CSS, and Supabase for reliability, performance, and scalability.",
     imageUrl: "project-1.png",
     tags: ["Next.js", "Tailwind", "Supabase"],
-    demoLink: "https://the-nikos-hotel-website.vercel.app",
     codeLink:
       "https://github.com/NicholasIchukwuAgbo001/hotel-management-system.git",
   },
@@ -64,7 +63,6 @@ export const PROJECTS = [
       "A React-based SPA for exploring global country data via the REST Countries API. Features include region based filtering, live search, client side pagination, border country navigation, persistent data fetching, and responsive design. Built with Vite, Tailwind CSS, React Router, and Zustand for state management.",
     imageUrl: "project-6.png",
     tags: ["React", "Vite", "Tailwind", "Zustand", "REST API", "React Router"],
-    demoLink: "https://my-interstellar-atlas.vercel.app",
     codeLink:
       "https://github.com/NicholasIchukwuAgbo001/my-interstellar-atlas.git",
   },
@@ -74,7 +72,6 @@ export const PROJECTS = [
       "An interactive pizza ordering platform featuring customizable toppings, dynamic cart management, and real-time order tracking. Built with React and Redux Toolkit, it includes Naira currency formatting, responsive Tailwind CSS design, and an intuitive checkout flow for a seamless user experience.",
     imageUrl: "project-4.png",
     tags: ["React", "Tailwind", "Redux Toolkit", "JavaScript"],
-    demoLink: "https://nikki-s-home-made-pizza.vercel.app/",
     codeLink:
       "https://github.com/NicholasIchukwuAgbo001/Nikki-s-home-made-pizza.git",
   },
