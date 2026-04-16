@@ -95,6 +95,12 @@ const HeroSection = () => {
               React
             </motion.span>
             <motion.span
+              className="bg-blue-500 text-white px-3 py-1 rounded-full"
+              whileHover={{ y: -5, backgroundColor: "#3B82F6" }}
+            >
+              React Native
+            </motion.span>
+            <motion.span
               className="bg-gray-900 text-white px-3 py-1 rounded-full"
               whileHover={{ y: -5, backgroundColor: "#111827" }}
             >
