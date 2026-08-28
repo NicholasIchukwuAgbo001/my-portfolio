@@ -49,6 +49,15 @@ export const SOCIAL_LINKS = [
 
 export const PROJECTS = [
   {
+    title: "Nicodemus Store",
+    description:
+      "A feature-rich e-commerce platform with comprehensive product catalog management, advanced filtering and search capabilities, and seamless shopping cart integration. Features include user authentication, real-time inventory tracking, secure checkout flow, and order management. Built with React and Redux Toolkit for robust state management, styled with Tailwind CSS for a modern responsive interface, and deployed on Vercel for optimal performance and reliability.",
+    imageUrl: "project-2.png",
+    tags: ["React", "Tailwind", "Redux Toolkit", "Vercel"],
+    demoLink: "https://nicodemus-store-001.vercel.app",
+    codeLink: "https://github.com/NicholasIchukwuAgbo001/Nicodemus-store-001.git",
+  },
+  {
     title: "Hotel Management System",
     description:
       "A full-stack hotel reservation and administration platform featuring secure user authentication, real-time room availability tracking, and an intuitive booking interface. Includes booking management, admin dashboards for room control, and responsive design for seamless use across devices. Built with Next.js, Tailwind CSS, and Supabase for reliability, performance, and scalability.",
@@ -74,15 +83,6 @@ export const PROJECTS = [
     tags: ["React", "Tailwind", "Redux Toolkit", "JavaScript"],
     codeLink:
       "https://github.com/NicholasIchukwuAgbo001/Nikki-s-home-made-pizza.git",
-  },
-  {
-    title: "Nicodemus Store",
-    description:
-      "A feature-rich e-commerce platform with comprehensive product catalog management, advanced filtering and search capabilities, and seamless shopping cart integration. Features include user authentication, real-time inventory tracking, secure checkout flow, and order management. Built with React and Redux Toolkit for robust state management, styled with Tailwind CSS for a modern responsive interface, and deployed on Vercel for optimal performance and reliability.",
-    imageUrl: "project-2.png",
-    tags: ["React", "Tailwind", "Redux Toolkit", "Vercel"],
-    demoLink: "https://nicodemus-store-001.vercel.app",
-    codeLink: "https://github.com/NicholasIchukwuAgbo001/Nicodemus-store-001.git",
   },
   {
     title: "Expense Tracker",
