@@ -23,7 +23,7 @@ const About = () => {
           Ready to bring your idea to life?
         </p>
         <a
-          href="https://wa.me/2347058705863"
+          href="https://wa.me/2348103169500"
           className="px-5 py-2 bg-blue-500 rounded-full"
         >
           Let's work together

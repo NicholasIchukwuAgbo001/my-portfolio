@@ -52,7 +52,7 @@ const ContactInfo = () => {
           variants={itemVariants}
         >
           <FaPhoneAlt className="text-blue-400" />
-          +234 705 870 5863
+          +234 810 316 9500
         </motion.p>
       </div>
     </motion.div>

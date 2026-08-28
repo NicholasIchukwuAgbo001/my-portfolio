@@ -35,6 +35,13 @@ const TimeLine = () => {
       description:
         "Graduated with honors from Semicolon Africa, where I specialized in web technologies and software engineering. Gained in-depth knowledge of full-stack development, algorithms, system design, and agile methodologies. Built real-world projects, collaborated with teams, and developed strong problem-solving and communication skills that prepared me for professional software engineering roles.",
     },
+    {
+      year: "2025 - 2026",
+      title: "Software Engineer",
+      taught: "Olakz Logistic Company",
+      description:
+        "Working at Olakz Logistic Company in Ikorodu, Lagos, developing and maintaining logistics management systems. Contributing to building efficient solutions for supply chain operations, implementing real-time tracking features, and optimizing delivery workflows to enhance operational efficiency.",
+    },
   ];
 
   return (

@@ -14,7 +14,7 @@ const navLists = [
 
 const stats = [
   { value: 20, suffix: "+", label: "Projects Completed" },
-  { value: 1, suffix: "+", label: "Years Experience" },
+  { value: 2, suffix: "+", label: "Years Experience" },
   { value: 15, suffix: "+", label: "Technologies" },
   { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];

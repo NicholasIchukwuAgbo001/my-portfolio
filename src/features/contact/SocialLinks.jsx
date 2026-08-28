@@ -66,7 +66,7 @@ const SocialLinks = () => {
     {
       name: "WhatsApp",
       icon: <FaWhatsapp className="text-xl" />,
-      url: "https://wa.me/2347058705863",
+      url: "https://wa.me/2348103169500",
       bgColor: "bg-green-100",
       hoverBgColor: "bg-green-200",
       textColor: "text-green-800",

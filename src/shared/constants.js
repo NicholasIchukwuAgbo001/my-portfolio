@@ -39,7 +39,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/2347058705863",
+    url: "https://wa.me/2348103169500",
   },
   {
     name: "Facebook",
@@ -76,12 +76,13 @@ export const PROJECTS = [
       "https://github.com/NicholasIchukwuAgbo001/Nikki-s-home-made-pizza.git",
   },
   {
-    title: "E-commerce Website",
+    title: "Nicodemus Store",
     description:
-      "A modern, responsive e-commerce platform featuring dynamic product listings, integrated shopping cart functionality, and advanced Redux Toolkit state management. Built with a sleek Tailwind CSS interface for smooth browsing, it offers optimized performance, mobile-friendly design, and a scalable architecture ready for future expansion.",
+      "A feature-rich e-commerce platform with comprehensive product catalog management, advanced filtering and search capabilities, and seamless shopping cart integration. Features include user authentication, real-time inventory tracking, secure checkout flow, and order management. Built with React and Redux Toolkit for robust state management, styled with Tailwind CSS for a modern responsive interface, and deployed on Vercel for optimal performance and reliability.",
     imageUrl: "project-2.png",
-    tags: ["React", "Tailwind", "Redux Toolkit"],
-    codeLink: "https://github.com/NicholasIchukwuAgbo001/e-commerce-app.git",
+    tags: ["React", "Tailwind", "Redux Toolkit", "Vercel"],
+    demoLink: "https://nicodemus-store-001.vercel.app",
+    codeLink: "https://github.com/NicholasIchukwuAgbo001/Nicodemus-store-001.git",
   },
   {
     title: "Expense Tracker",

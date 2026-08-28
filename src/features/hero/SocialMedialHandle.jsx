@@ -44,7 +44,7 @@ const SocialMedialHandle = () => {
 
 
       <a
-        href="https://wa.me/2347058705863"
+        href="https://wa.me/2348103169500"
         target="_blank"
         rel="noopener noreferrer"
         >
