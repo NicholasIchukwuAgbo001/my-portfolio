@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const colors = [
-  "text-blue-500",
-  "text-red-500",
-  "text-green-500",
-  "text-purple-500",
-  "text-yellow-500",
-  "text-pink-500",
-  "text-cyan-500",
-  "text-orange-500",
+  "text-emerald-400",
+  "text-amber-400",
+  "text-cyan-400",
+  "text-rose-400",
+  "text-violet-400",
+  "text-teal-400",
+  "text-orange-400",
+  "text-sky-400",
 ];
 
 const messages = [

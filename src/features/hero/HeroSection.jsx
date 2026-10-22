@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import SocialMediaHandle from "./SocialMedialHandle";
 import HeroH1 from "./HeroH1";
 
@@ -16,8 +17,18 @@ const textVariant = {
 };
 
 const HeroSection = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
+
   return (
-    <section className="text-white pb-10 pt-10 relative overflow-hidden">
+    <section ref={ref} className="text-white pb-10 pt-10 relative overflow-hidden min-h-screen flex items-center">
+      <motion.div style={{ y, opacity }} className="w-full">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-16">
         <motion.div
           initial="hidden"
@@ -31,7 +42,7 @@ const HeroSection = () => {
           <motion.p
             custom={2}
             variants={textVariant}
-            className="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed hover:text-stone-100 py-5"
+            className="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed py-5"
           >
             I craft beautiful and functional web and mobile applications using modern
             technologies, always with a focus on clean design and exceptional
@@ -45,23 +56,50 @@ const HeroSection = () => {
           >
             <motion.a
               href="#work"
-              className="relative overflow-hidden bg-blue-600 text-white px-5 sm:px-6 py-2 rounded-full font-medium
-                        before:absolute before:inset-0 before:bg-blue-800 before:-translate-x-full
-                        before:transition-transform before:duration-500 hover:before:translate-x-0"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="relative overflow-hidden bg-emerald-600 text-white px-5 sm:px-6 py-2 rounded-full font-medium
+                        before:absolute before:inset-0 before:bg-gradient-to-r before:from-emerald-500 before:to-cyan-600 before:-translate-x-full
+                        before:transition-transform before:duration-500 hover:before:translate-x-0 shadow-lg hover:shadow-emerald-500/50
+                        after:absolute after:inset-0 after:rounded-full after:opacity-0 hover:after:opacity-100 
+                        after:shadow-[0_0_30px_rgba(16,185,129,0.6)] after:transition-opacity after:duration-500"
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              animate={{
+                boxShadow: [
+                  '0 10px 25px -5px rgba(16, 185, 129, 0.3)',
+                  '0 10px 25px -5px rgba(16, 185, 129, 0.5)',
+                  '0 10px 25px -5px rgba(16, 185, 129, 0.3)',
+                ],
+              }}
+              transition={{
+                boxShadow: {
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }
+              }}
             >
               <span className="relative z-10">View Work</span>
             </motion.a>
 
             <motion.a
               href="#contact"
-              className="relative overflow-hidden border border-white text-white px-5 sm:px-6 py-2 rounded-full font-medium
-                        before:absolute before:inset-0 before:bg-white before:-translate-x-full
-                        before:transition-transform before:duration-500 hover:before:translate-x-0
-                        hover:text-slate-950"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="relative overflow-hidden border-2 border-emerald-400 text-white px-5 sm:px-6 py-2 rounded-full font-medium
+                        before:absolute before:inset-0 before:bg-gradient-to-r before:from-emerald-500 before:to-cyan-600 before:-translate-x-full
+                        before:transition-transform before:duration-500 hover:before:translate-x-0 shadow-lg hover:shadow-cyan-500/50
+                        after:absolute after:inset-0 after:rounded-full after:opacity-0 hover:after:opacity-100 
+                        after:shadow-[0_0_30px_rgba(6,182,212,0.6)] after:transition-opacity after:duration-500"
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              animate={{
+                borderColor: ['rgba(16, 185, 129, 1)', 'rgba(6, 182, 212, 1)', 'rgba(16, 185, 129, 1)'],
+              }}
+              transition={{
+                borderColor: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }
+              }}
             >
               <span className="relative z-10">Get in Touch</span>
             </motion.a>
@@ -82,50 +120,6 @@ const HeroSection = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="flex flex-col items-center gap-5 sm:gap-6"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base font-mono"
-          >
-            <motion.span
-              className="bg-blue-500 text-white px-3 py-1 rounded-full"
-              whileHover={{ y: -5, backgroundColor: "#3B82F6" }}
-            >
-              React
-            </motion.span>
-            <motion.span
-              className="bg-blue-500 text-white px-3 py-1 rounded-full"
-              whileHover={{ y: -5, backgroundColor: "#3B82F6" }}
-            >
-              React Native
-            </motion.span>
-            <motion.span
-              className="bg-gray-900 text-white px-3 py-1 rounded-full"
-              whileHover={{ y: -5, backgroundColor: "#111827" }}
-            >
-              Next.js
-            </motion.span>
-            <motion.span
-              className="bg-green-700 text-white px-3 py-1 rounded-full"
-              whileHover={{ y: -5, backgroundColor: "#16A34A" }}
-            >
-              Node.js
-            </motion.span>
-            <motion.span
-              className="bg-yellow-400 text-black px-3 py-1 rounded-full"
-              whileHover={{ y: -5, backgroundColor: "#EAB308" }}
-            >
-              JavaScript
-            </motion.span>
-            <motion.span
-              className="bg-blue-700 text-white px-3 py-1 rounded-full"
-              whileHover={{ y: -5, backgroundColor: "#1D4ED8" }}
-            >
-              TypeScript
-            </motion.span>
-          </motion.div>
-
           <motion.div
             animate={{ y: [0, -10, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -171,6 +165,7 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
+      </motion.div>
     </section>
   );
 };
