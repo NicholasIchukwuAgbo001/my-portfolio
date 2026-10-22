@@ -3,8 +3,11 @@ import { FiCheck } from 'react-icons/fi';
 
 const AvailableBanner = () => {
   return (
-    <motion.div
-      className="fixed top-20 right-4 z-40"
+    <motion.a
+      href="https://wa.me/2348103169500"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed top-20 right-4 z-40 cursor-pointer"
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ delay: 1, type: "spring", stiffness: 100 }}
@@ -52,7 +55,7 @@ const AvailableBanner = () => {
           }}
         />
       </motion.div>
-    </motion.div>
+    </motion.a>
   );
 };
 
