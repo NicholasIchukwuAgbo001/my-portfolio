@@ -49,6 +49,15 @@ export const SOCIAL_LINKS = [
 
 export const PROJECTS = [
   {
+    title: "Olakz Ride",
+    description:
+      "An all-in-one transportation, logistics, shopping and lifestyle platform that connects customers, drivers, delivery couriers and service providers in one app. Designed to make everyday services easier to access while creating income opportunities for drivers, vendors and other service providers. Features ride-hailing, delivery services, shopping integration, and multi-service provider management with real-time tracking and seamless payment systems.",
+    imageUrl: "olakz_2.png",
+    tags: ["React Native", "Real-time Tracking", "Multi-service Platform", "Payment Integration"],
+    demoLink: "https://olakzride.duckdns.org/r/NICHOLASIC3GK",
+    demoLinkText: "Download App",
+  },
+  {
     title: "Nicodemus Store",
     description:
       "A feature-rich e-commerce platform with comprehensive product catalog management, advanced filtering and search capabilities, and seamless shopping cart integration. Features include user authentication, real-time inventory tracking, secure checkout flow, and order management. Built with React and Redux Toolkit for robust state management, styled with Tailwind CSS for a modern responsive interface, and deployed on Vercel for optimal performance and reliability.",
@@ -129,5 +138,13 @@ export const SKILLS = {
     { name: "Docker", level: 75, color: "bg-sky-500" },
     { name: "Git", level: 90, color: "bg-red-500" },
     { name: "AWS", level: 75, color: "bg-orange-500" },
+  ],
+  creative: [
+    { name: "UI/UX Design", level: 85, color: "bg-purple-500" },
+    { name: "Creative Direction", level: 80, color: "bg-pink-500" },
+    { name: "Social Media Management", level: 85, color: "bg-rose-500" },
+    { name: "Content Strategy", level: 80, color: "bg-violet-500" },
+    { name: "Brand Identity", level: 75, color: "bg-fuchsia-600" },
+    { name: "Figma", level: 85, color: "bg-indigo-400" },
   ],
 };

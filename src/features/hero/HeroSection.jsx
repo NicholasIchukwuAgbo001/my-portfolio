@@ -33,7 +33,7 @@ const HeroSection = () => {
             variants={textVariant}
             className="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed hover:text-stone-100 py-5"
           >
-            I craft beautiful and functional web applications using modern
+            I craft beautiful and functional web and mobile applications using modern
             technologies, always with a focus on clean design and exceptional
             user experience.
           </motion.p>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Button from "../buttons/Button";
 import Tag from "./Tag";
 
@@ -8,8 +9,23 @@ const ProjectCard = ({
   imageUrl,
   tags,
   demoLink,
+  demoLinkText,
   codeLink,
 }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const isImageArray = Array.isArray(imageUrl);
+  const images = isImageArray ? imageUrl : [imageUrl];
+
+  useEffect(() => {
+    if (!isImageArray) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isImageArray, images.length]);
+
   return (
     <motion.div
       className="bg-slate-800 rounded-xl overflow-hidden shadow-lg relative"
@@ -30,15 +46,23 @@ const ProjectCard = ({
         whileHover="hover"
         initial={{ scale: 1 }}
       >
-        <motion.img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-full object-cover"
-          variants={{
-            hover: { scale: 1.15 },
-          }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-        />
+        {images.map((img, index) => (
+          <motion.img
+            key={index}
+            src={img}
+            alt={`${title} ${index + 1}`}
+            className="w-full h-full object-cover absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: currentImageIndex === index ? 1 : 0,
+              scale: currentImageIndex === index ? 1 : 1.1,
+            }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            variants={{
+              hover: { scale: 1.15 },
+            }}
+          />
+        ))}
 
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"
@@ -46,6 +70,21 @@ const ProjectCard = ({
           whileHover={{ opacity: 0.3 }}
           transition={{ duration: 0.3 }}
         />
+
+        {isImageArray && images.length > 1 && (
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentImageIndex === index
+                    ? "bg-blue-400 w-6"
+                    : "bg-slate-400"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </motion.div>
 
       <div className="p-5 space-y-4 relative z-20">
@@ -110,7 +149,7 @@ const ProjectCard = ({
               size="sm"
               onClick={() => window.open(demoLink, "_blank")}
             >
-              Live Demo
+              {demoLinkText || "Live Demo"}
             </Button>
           )}
           {codeLink && (

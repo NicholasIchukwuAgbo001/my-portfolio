@@ -15,13 +15,28 @@ const colors = [
 const messages = [
   { line1: "Building Digital", line2: "Experiences", line3: "That Matter" },
   {
+    line1: "Creative Direction",
+    line2: "Meets Technical",
+    line3: "Excellence",
+  },
+  {
     line1: "Turning Ambition",
     line2: "Into Innovation",
     line3: "Through Code",
   },
   { line1: "Designing Solutions", line2: "For Real World", line3: "Problems" },
+  { 
+    line1: "Social Media", 
+    line2: "& Creative Strategy", 
+    line3: "That Engages" 
+  },
   { line1: "Crafting Clean", line2: "and Scalable", line3: "Code" },
   { line1: "Transforming Ideas", line2: "Into", line3: "Reality" },
+  { 
+    line1: "Blending Creativity", 
+    line2: "With Technology", 
+    line3: "Seamlessly" 
+  },
   { line1: "Delivering Quality", line2: "Software", line3: "On Time" },
   {
     line1: "Engineering Elegant",
@@ -145,7 +160,7 @@ const HeroH1 = () => {
         className="text-stone-400 uppercase text-sm tracking-widest mb-4 sm:mb-6 text-center lg:text-left"
         variants={itemVariants}
       >
-        Senior Software Engineer
+        Creative All-Rounder | Software Engineer
       </motion.p>
 
       <motion.h1

@@ -4,7 +4,7 @@ import SkillCategory from "./SkillCategory";
 import ToggleButton from "../../ui/buttons/ToggleButton";
 import SectionHeader from "../../ui/sections/SectionHeader";
 import OtherSkills from "./OtherSkills";
-import { FaCode, FaDatabase, FaServer, FaCloud } from "react-icons/fa";
+import { FaCode, FaDatabase, FaServer, FaCloud, FaPalette } from "react-icons/fa";
 import { SKILLS } from "../../shared/constants";
 
 const containerVariants = {
@@ -78,6 +78,15 @@ const Skills = () => {
               icon={<FaCloud className="text-purple-500" />}
               description="Deploying and scaling applications"
               skills={SKILLS.devops}
+              variants={itemVariants}
+              animateOnShow
+            />
+
+            <SkillCategory
+              title="Creative & Social Media"
+              icon={<FaPalette className="text-pink-500" />}
+              description="Creative direction and social media management"
+              skills={SKILLS.creative}
               variants={itemVariants}
               animateOnShow
             />
