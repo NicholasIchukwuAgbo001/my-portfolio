@@ -22,23 +22,23 @@ const TimeLine = () => {
         "Currently building scalable applications, contributing to meaningful projects, and continually learning.",
     },
     {
-      year: "2024",
-      title: "Frontend Engineer",
-      taught: "Hyperbird Technologies",
-      description:
-        "Worked on building and optimizing responsive, accessible, and high performance web applications. Implemented component driven architecture, state management with Redux/Context, API integrations, and collaborated with designers to deliver modern, user friendly interfaces.",
-    },
-    {
-      year: "2024",
+      year: "2024-2025",
       title: "Computer Science Degree",
       taught: "Semicolon Africa",
       description:
         "Graduated with honors from Semicolon Africa, where I specialized in web technologies and software engineering. Gained in-depth knowledge of full-stack development, algorithms, system design, and agile methodologies. Built real-world projects, collaborated with teams, and developed strong problem-solving and communication skills that prepared me for professional software engineering roles.",
     },
     {
-      year: "2025 - 2026",
-      title: "Software Engineer",
-      taught: "Olakz Logistic Company",
+      year: "2025",
+      title: "Frontend Developer",
+      taught: "Hyperbird Technologies, Remote",
+      description:
+        "Worked on building and optimizing responsive, accessible, and high performance web applications. Implemented component driven architecture, state management with Redux/Context, API integrations, and collaborated with designers to deliver modern, user friendly interfaces.",
+    },
+    {
+      year: "2026 till date",
+      title: "Full-Stack Developer",
+      taught: "Olakz Logistics, Hybrid",
       description:
         "Working at Olakz Logistic Company in Ikorodu, Lagos, developing and maintaining logistics management systems. Contributing to building efficient solutions for supply chain operations, implementing real-time tracking features, and optimizing delivery workflows to enhance operational efficiency.",
     },
@@ -46,19 +46,19 @@ const TimeLine = () => {
 
   return (
     <div className="p-6 text-left">
-      <h3 className="text-2xl font-semibold mb-4 text-blue-500">My Journey</h3>
-      <ul className="space-y-6 border-l-2 border-blue-600 pl-8 relative">
+      <h3 className="text-2xl font-semibold mb-4 text-emerald-400">My Journey</h3>
+      <ul className="space-y-6 border-l-2 border-emerald-500 pl-8 relative">
         {timelineItems.map((item, index) => (
           <li
             key={index}
             className="relative hover:scale-105 transition-all duration-300"
           >
-            <div className="absolute -left-3 top-1 w-5 h-5 bg-blue-600 rounded-full border-4 border-slate-950" />
+            <div className="absolute -left-3 top-1 w-5 h-5 bg-emerald-500 rounded-full border-4 border-slate-950" />
             <div className="bg-slate-900 p-4 rounded-lg shadow-md">
-              <p className="text-sm text-blue-400">{item.year}</p>
+              <p className="text-sm text-cyan-400">{item.year}</p>
               <h4 className="text-xl font-semibold text-white">{item.title}</h4>
               {item.taught && (
-                <p className="text-blue-500 text-sm mt-1 py-1">{item.taught}</p>
+                <p className="text-emerald-400 text-sm mt-1 py-1">{item.taught}</p>
               )}
               <p className="text-stone-300 text-sm mt-1">{item.description}</p>
             </div>
